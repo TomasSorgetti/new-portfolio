@@ -1,5 +1,7 @@
 import Image from "next/image";
 import styles from "./page.module.css";
+import Hero from "@/components/hero/Hero";
+import About from "@/components/About/About";
 
 export default function Home() {
   const technologies = [
@@ -15,7 +17,10 @@ export default function Home() {
 ];
   return (
     <main className={styles.main}>
-      <div
+      <Hero />
+      <About />
+      
+      {/* <div
         className="py-10 inline-flex flex-nowrap overflow-hidden [mask-image:_linear-gradient(to_right,transparent_0,_black_128px,_black_calc(100%-200px),transparent_100%)] w-[250px] mx-[calc((100%-250px)/2)] md:w-[750px] md:mx-[calc((100%-750px)/2)]"
       >
         <ul
@@ -32,7 +37,7 @@ export default function Home() {
             ))
           }
         </ul>
-      </div>
+      </div> */}
     </main>
   );
 }
