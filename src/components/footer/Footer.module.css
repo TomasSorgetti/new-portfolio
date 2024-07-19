@@ -1,0 +1,55 @@
+.footer_cont{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+    padding: 40px 0;
+}
+.footer_cont ul{
+    display: flex;
+    gap: 40px;
+    list-style: none;
+}
+
+.icon{
+    width: 46px;
+    height: 46px;
+}
+.icon a{
+    width: 100%;
+    height: 100%;
+}
+.linkedin{
+    background-image: url("../../assets/icons/linkedin.svg");
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+.behance{
+    background-image: url("../../assets/icons/ri_behance-fill.svg");
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+.github{
+    background-image: url("../../assets/icons/Github.svg");
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.link {
+    display: block;
+    width: 100%;
+    height: 100%;
+    text-decoration: none;
+    color: inherit;
+}
+
+.srOnly {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    margin: -1px;
+    padding: 0;
+    overflow: hidden;
+    clip: rect(0, 0, 0, 0);
+    border: 0;
+}
