@@ -28,19 +28,29 @@
 
 html{
   background-color: #080516;
-  color: white;
+  color: #D1D1D1;
   font-family: 'Bai Jamjuree', sans-serif;
   font-weight: 500;
+  font-size: 1.25rem;
 }
 
 h1{
   font-family: 'Bai Jamjuree', sans-serif;
   font-weight: 700;
+  color: white;
 }
 #title_name{
   font-family: 'Days One', sans-serif;
   font-size: 3.75rem;
+  color: white;
 }
 h2,h3,h4,h5,h6{
   font-family: 'Days One', sans-serif;
+  color: white;
+}
+
+
+#about {
+  max-width: 1100px;
+  margin: 0 auto;
 }

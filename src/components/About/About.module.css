@@ -1,0 +1,63 @@
+.title_container h2{
+    font-size: 3rem;
+    text-transform: uppercase;
+}
+.title_container span{
+    font-weight: 700;
+    font-size: 1.5rem;
+}
+.about_text_container{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 40px;
+    margin-top: 40px;
+}
+.text_container{
+    width: 100%;
+    max-width: 620px;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+.about_text_container ul{
+    list-style: none;
+    color: white;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    gap: 10px;
+}
+.about_text_container ul li{
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+.stronger{
+    color: #FE0072;
+    font-weight: 700;
+}
+.icon{
+    width: 46px;
+    height: 46px;
+}
+.pc{
+    background-image: url("../../assets/icons/pc.svg");
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+.ide{
+    background-image: url("../../assets/icons/ide.svg");
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+.hobby{
+    background-image: url("../../assets/icons/hobby.svg");
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+.music{
+    background-image: url("../../assets/icons/music.svg");
+    background-repeat: no-repeat;
+    background-size: cover;
+}
