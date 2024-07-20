@@ -3,7 +3,6 @@ import { Inter } from "next/font/google";
 import "./globals.css";
 import Hero from "@/components/hero/Hero";
 import Footer from "@/components/footer/Footer";
-
 const inter = Inter({ subsets: ["latin"] });
 
 export const metadata: Metadata = {
@@ -17,13 +16,16 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="es">      
-      <body className={inter.className}>
+    <html lang="es">
+      <head>
+        <link rel="shortcut icon" href="icon.png" type="image/x-icon" />
+      </head>
+      <body className={`${inter.className} main_body`}>
         <Hero />
-        
+
         {children}
 
-        <Footer/>
+        <Footer />
       </body>
     </html>
   );

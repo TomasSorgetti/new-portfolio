@@ -25,6 +25,9 @@
   padding: 0;
   box-sizing: border-box;
 }
+:root{
+  scroll-behavior: smooth;
+}
 
 html{
   background-color: #080516;
@@ -32,6 +35,13 @@ html{
   font-family: 'Bai Jamjuree', sans-serif;
   font-weight: 500;
   font-size: 1.25rem;
+}
+.main_body{
+  display: flex;
+  flex-direction: column;
+  background-image: url("../assets/images/bg_filter.png");
+  background-repeat: no-repeat;
+  background-size: cover;
 }
 
 h1{
@@ -48,6 +58,7 @@ h1{
   font-family: 'Days One', sans-serif;
   font-size: 3.5rem;
   color: white;
+  text-transform: uppercase;
 }
 
 h2,h3,h4,h5,h6{
@@ -62,4 +73,12 @@ h2{
 #about, #technologies, #projects{
   max-width: 1100px;
   margin: 0 auto;
+}
+#loader{
+  display: flex!important;
+  justify-content: center!important;
+  align-items: center!important;
+}
+#loader span{
+  margin-right: 5px !important;
 }

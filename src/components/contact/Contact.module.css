@@ -1,0 +1,83 @@
+.contact_container {
+    text-align: center;
+    margin-top: 80px;
+}
+
+.contact_container p{
+    max-width: 660px;
+    margin: 40px auto;
+}
+
+
+.stronger{
+    font-weight: 700;
+    color: #FE0072;
+}
+
+
+.contact_container form{
+    max-width: 500px;
+    margin: 80px auto;
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+    align-items: center;
+}
+.contact_container form .input_cont{
+    text-align: start;
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+}
+.contact_container form .input_cont label{
+    color: white;
+    font-size: 1.25rem;
+    font-weight: 700;
+    position: relative;
+}
+.input_cont label::after{
+    content: "*";
+    position: absolute;
+    color: #FE0072;
+    font-size: 0.9rem;
+}
+.contact_container form .input_cont input{
+    height: 56px;
+    border-radius: 6px;
+    background-color: transparent;
+    border: 1px solid white;
+    padding: 12px;
+    font-size: 1.25rem;
+    color: white;
+}
+.contact_container form .input_cont textarea{
+    border-radius: 6px;
+    max-width: 500px;
+    min-width: 500px;
+    max-height: 200px;
+    min-height: 200px;
+    background-color: transparent;
+    border: 1px solid white;
+    padding: 12px;
+    font-size: 1.25rem;
+    color: white;
+}
+.contact_container form button{
+    margin-top: 20px;
+    padding: 12px 60px;
+    font-size: 1rem;
+    background-color: #FE0072;
+    border: 2px solid #FE0072;
+    border-radius: 6px;
+    color: white;
+    cursor: pointer;
+    font-family: "Days One", sans-serif;
+}
+
+.error{
+    color: #FE0072;
+}
+.button_loading{
+    background-color: #e293b7!important;
+    border-color: #e293b7!important;
+}

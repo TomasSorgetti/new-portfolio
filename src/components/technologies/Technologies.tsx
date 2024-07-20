@@ -19,35 +19,36 @@ const Technologies = () => {
     "postgres",
     "mysql",
   ];
+  const tamaño = Math.ceil(technologies.length / 3);
+
+  const array1 = technologies.slice(0, tamaño);
+  const array2 = technologies.slice(tamaño, tamaño * 2);
+  const array3 = technologies.slice(tamaño * 2);
 
   return (
     <section id="technologies" className={styles.technologies_cont}>
       <h2>Tecnologías</h2>
-      <ul>
-        {technologies?.map((el) => (
-          <li>
+      <ul className={styles.arr1}>
+        {array1?.map((el, index) => (
+          <li key={el} style={{ "--pos": index + 1 }}>
             <h3>{el}</h3>
           </li>
         ))}
       </ul>
-      {/* <div
-        className="py-10 inline-flex flex-nowrap overflow-hidden [mask-image:_linear-gradient(to_right,transparent_0,_black_128px,_black_calc(100%-200px),transparent_100%)] w-[250px] mx-[calc((100%-250px)/2)] md:w-[750px] md:mx-[calc((100%-750px)/2)]"
-      >
-        <ul
-          className="flex items-center justify-center md:justify-start xl:[&_li]:mx-8 [&_img]:max-w-none animate-infinite-scroll"
-        >
-          {
-            technologies?.map((el) => (
-              <li
-                className="text-4xl text-white font-bold uppercase mx-2"
-                style="text-shadow: 0px 3px 8px rgb(132, 57, 249)"
-              >
-                {el}
-              </li>
-            ))
-          }
-        </ul>
-      </div> */}
+      <ul className={styles.arr2}>
+        {array2?.map((el, index) => (
+          <li key={el} style={{ "--pos": index + 1 }}>
+            <h3>{el}</h3>
+          </li>
+        ))}
+      </ul>
+      <ul className={styles.arr3}>
+        {array3?.map((el, index) => (
+          <li key={el} style={{ "--pos": index + 1 }}>
+            <h3>{el}</h3>
+          </li>
+        ))}
+      </ul>
     </section>
   );
 };
