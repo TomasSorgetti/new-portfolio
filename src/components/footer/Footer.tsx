@@ -1,10 +1,14 @@
+"use client";
 import styles from "./Footer.module.css";
 import { TbBrandGithub } from "react-icons/tb";
 import { RiLinkedinBoxLine } from "react-icons/ri";
 import { FaBehance } from "react-icons/fa";
 const Footer = () => {
   return (
-    <footer className={styles.footer_cont}>
+    <footer
+      className={styles.footer_cont}
+      onContextMenu={(e) => e.preventDefault()}
+    >
       <span id="footer_name">Tomas Sorgetti</span>
       <ul>
         <li className={`${styles.icon}`}>

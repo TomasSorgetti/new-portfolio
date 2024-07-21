@@ -20,7 +20,10 @@ export default function RootLayout({
       <head>
         <link rel="shortcut icon" href="icon.png" type="image/x-icon" />
       </head>
-      <body className={`${inter.className} main_body`}>
+      <body
+        className={`${inter.className} main_body`}
+        
+      >
         <Hero />
 
         {children}
