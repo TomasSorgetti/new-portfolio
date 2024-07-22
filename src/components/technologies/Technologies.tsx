@@ -1,54 +1,62 @@
+"use client";
+
+import { useEffect, useState } from "react";
 import styles from "./Technologies.module.css";
+import { getAllTechnologies } from "@/services/technologiesService";
 
 const Technologies = () => {
-  const technologies = [
-    "figma",
-    "photoshop",
-    "html",
-    "css",
-    "javascript",
-    "sass",
-    "talwind",
-    "react",
-    "astro",
-    "wordpress",
-    "next.js",
-    "node",
-    "express",
-    "sequelize",
-    "postgres",
-    "mysql",
-  ];
-  const tamaño = Math.ceil(technologies.length / 3);
+  const [technologies, setTechnologies] = useState<string[]>([]);
+  const [isLoading, setIsLoading] = useState<boolean>(true);
 
-  const array1 = technologies.slice(0, tamaño);
-  const array2 = technologies.slice(tamaño, tamaño * 2);
-  const array3 = technologies.slice(tamaño * 2);
+  useEffect(() => {
+    const fetchTechnologies = async (): Promise<void> => {
+      try {
+        const data: string[] = await getAllTechnologies();
+        setTechnologies(data);
+      } catch (error) {
+        console.error("Error fetching technologies:", error);
+      } finally {
+        setIsLoading(false);
+      }
+    };
+
+    fetchTechnologies();
+  }, []);
+
+  const chunkArray = (array: string[], size: number): string[][] => {
+    const result: string[][] = [];
+    for (let i = 0; i < array.length; i += size) {
+      result.push(array.slice(i, i + size));
+    }
+    return result;
+  };
+
+  const technologyChunks = chunkArray(
+    technologies,
+    Math.ceil(technologies.length / 3)
+  );
 
   return (
     <section id="technologies" className={styles.technologies_cont}>
       <h2>Tecnologías</h2>
-      <ul className={styles.arr1}>
-        {array1?.map((el, index) => (
-          <li key={el} style={{ "--pos": index + 1 }}>
-            <h3>{el}</h3>
-          </li>
-        ))}
-      </ul>
-      <ul className={styles.arr2}>
-        {array2?.map((el, index) => (
-          <li key={el} style={{ "--pos": index + 1 }}>
-            <h3>{el}</h3>
-          </li>
-        ))}
-      </ul>
-      <ul className={styles.arr3}>
-        {array3?.map((el, index) => (
-          <li key={el} style={{ "--pos": index + 1 }}>
-            <h3>{el}</h3>
-          </li>
-        ))}
-      </ul>
+      {isLoading ? (
+        <p>Searching for technologies...</p>
+      ) : (
+        <div>
+          {technologyChunks.map((chunk, chunkIndex) => (
+            <ul
+              key={chunkIndex}
+              className={`${styles[`arr${chunkIndex + 1}`]}`}
+            >
+              {chunk.map((tech, index) => (
+                <li key={tech} style={{ "--pos": index + 1 }}>
+                  <h3>{tech}</h3>
+                </li>
+              ))}
+            </ul>
+          ))}
+        </div>
+      )}
     </section>
   );
 };

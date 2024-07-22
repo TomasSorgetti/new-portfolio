@@ -1,4 +1,3 @@
-import Projects from '@/components/projects/Projects';
 interface Project{
     id: number;
     name: string;

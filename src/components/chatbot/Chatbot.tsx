@@ -6,14 +6,14 @@ import styles from "./Chatbot.module.css";
 import { steps } from "./ChatbotSteps";
 
 const theme = {
-  background: "#080516",
+  background: "rgba(8, 5, 22, 0.8);",
   fontFamily: "Bai Jamjuree",
-  headerBgColor: "#FE0072",
+  headerBgColor: "rgba(254, 0, 114, 0.6)",
   headerFontColor: "#fff",
   headerFontSize: "15px",
-  botBubbleColor: "#191432",
+  botBubbleColor: "#19113d",
   botFontColor: "#ffff",
-  userBubbleColor: "#2c273f",
+  userBubbleColor: "#150462",
   userFontColor: "#ffffff",
 };
 
@@ -44,6 +44,11 @@ const ChatbotComponent = () => {
           recognitionLang="es-ES"
           placeholder="Escribe tu mensaje..."
           customDelay={100}
+          handleEnd={() => {
+            setTimeout(() => {
+              setIsOpen(false);
+            }, 1500);
+          }}
         />
       </ThemeProvider>
     </div>

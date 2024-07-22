@@ -40,7 +40,7 @@ html{
 .main_body{
   display: flex;
   flex-direction: column;
-  background-image: url("../assets/images/bg_filter.png");
+  background-image: url("/bg_filter.png");
   background-repeat: no-repeat;
   background-size: cover;
 }

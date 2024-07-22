@@ -19,13 +19,13 @@ export const steps = [
   {
     id: "option1",
     message:
-      "Me parece perfecto! El sitio tiene una sección que habla de mí, una de proyectos, una de tecnologías y una sección de contacto.",
+      "Me parece perfecto! El sitio tiene una sección que habla de mí, una de proyectos, una de tecnologías y una sección de contacto. Sentinte libre de explorarlo.",
     trigger: "end",
   },
 
   {
     id: "option2",
-    message: "Sobre qué quieres saber más de mi?",
+    message: "Sobre qué querés saber más de mí?",
     trigger: "aboutOptions",
   },
   {
@@ -33,7 +33,7 @@ export const steps = [
     options: [
       {
         value: 1,
-        label: "Qué tecnologías utilizas?",
+        label: "Qué tecnologías utilizás?",
         trigger: "about1",
       },
       { value: 2, label: "Qué y dónde estudiaste?", trigger: "about2" },
@@ -47,7 +47,7 @@ export const steps = [
   {
     id: "about1",
     message:
-      "De diseño mayoritariamente utilizo Figma y Photoshop. Para FrontEnd tengo conocimientos en Html, Css, Sass, Tailwind, Bootstrap, React, Astro, Next.js. Para BackEnd tengo conocimientos en Node, Express, Sequelize, Postgres, MySQL. También tengo conocimientos en Wordpress, Elementor y Woocommerce. Aunque todas esas son las tecnologías que manejo, tengo conocimientos básicos en algunas otras más, como Angular, jQuery, MongoDB, TypeScript.",
+      "De diseño utilizo Figma y Photoshop. Para FrontEnd tengo conocimientos en Html, Css, Sass, Tailwind, Bootstrap, React, Astro, Next.js. Para BackEnd tengo conocimientos en Node, Express, Sequelize, Postgres, MySQL. También tengo conocimientos en Wordpress, Elementor y Woocommerce. Aunque todas esas son las tecnologías que manejo, tengo conocimientos básicos en algunas otras más, como Angular, jQuery, MongoDB, TypeScript.",
     trigger: "aboutMore",
   },
   {
@@ -59,13 +59,13 @@ export const steps = [
   {
     id: "about3",
     message:
-      "Para hacerme una consulta puedes completar el formulario del sitio, mandarme un mail o contactarme por Whatsapp.",
+      "Para hacerme una consulta podés completar el formulario del sitio, mandarme un mail o contactarme por Whatsapp.",
     trigger: "contactOptions",
   },
 
   {
     id: "aboutMore",
-    message: "Quieres saber más?",
+    message: "Querés saber más?",
     trigger: "aboutMoreOptions",
   },
   {
@@ -79,7 +79,7 @@ export const steps = [
   {
     id: "option3",
     message:
-      "Perfecto! Al final del sitio tienes un formulario para contactarme, podés enviarme un correo o escribirme al Whatsapp.",
+      "Perfecto! Al final del sitio tenés un formulario para contactarme, podés enviarme un correo o escribirme al Whatsapp.",
     trigger: "contactOptions",
   },
   {

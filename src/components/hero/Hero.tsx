@@ -1,7 +1,6 @@
 "use client";
 import styles from "./Hero.module.css";
 import Image from "next/image";
-import author_img from "../../assets/images/hero.png";
 const Hero = () => {
   return (
     <header className={styles.header} onContextMenu={(e) => e.preventDefault()}>
@@ -26,7 +25,7 @@ const Hero = () => {
           <span className={styles.fullstack}>Full Stack</span>
         </h1>
         <Image
-          src={author_img}
+          src="/hero.png"
           alt="tomas sorgetti looking to a side"
           width={"606"}
           height={606}

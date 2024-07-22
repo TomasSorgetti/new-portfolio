@@ -38,22 +38,22 @@
     height: 46px;
 }
 .pc{
-    background-image: url("../../assets/icons/pc.svg");
+    background-image: url("/icons/pc.svg");
     background-repeat: no-repeat;
     background-size: cover;
 }
 .ide{
-    background-image: url("../../assets/icons/ide.svg");
+    background-image: url("/icons/ide.svg");
     background-repeat: no-repeat;
     background-size: cover;
 }
 .hobby{
-    background-image: url("../../assets/icons/hobby.svg");
+    background-image: url("/icons/hobby.svg");
     background-repeat: no-repeat;
     background-size: cover;
 }
 .music{
-    background-image: url("../../assets/icons/music.svg");
+    background-image: url("/icons/music.svg");
     background-repeat: no-repeat;
     background-size: cover;
 }
