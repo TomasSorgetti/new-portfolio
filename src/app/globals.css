@@ -71,7 +71,7 @@ h2{
   text-transform: uppercase;
 }
 
-#about, #technologies, #projects{
+#about, #technologies, #projects, #proyectos{
   max-width: 1100px;
   margin: 0 auto;
 }

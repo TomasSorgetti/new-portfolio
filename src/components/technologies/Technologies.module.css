@@ -1,54 +1,59 @@
-.technologies_cont{
+.technologies_cont {
     padding: 80px 0;
     text-align: center;
     width: 100%;
 }
-.technologies_cont h2{
+
+.technologies_cont h2 {
     margin: 80px 0;
 }
-.technologies_cont ul{
-    margin-bottom: 80px;
-    list-style: none;
-    position: relative;
-    height: 100px;
-    overflow: hidden;
-    mask-image: linear-gradient(
-        to right,
-        rgba(0, 0, 0, 0) 0%,
-        rgba(0, 0, 0, 1) 20%,
-        rgba(0, 0, 0, 1) 80%,
-        rgba(0, 0, 0, 0)
-    );
-}
-.arr1 li{
-    position: absolute;
-    left: 100%;
-    animation-name: scroll_left;
-    animation-duration: 10s;
-    animation-timing-function: linear;
-    animation-iteration-count: infinite;
-    animation-delay: calc(var(--pos) * 6s);
-}
-.arr2 li{
-    position: absolute;
-    left: -490px;
-    animation-name: scroll_right;
-    animation-duration: 20s;
-    animation-timing-function: linear;
-    animation-iteration-count: infinite;
-    animation-delay: calc(var(--pos) * 5s);
-}
-.arr3 li{
-    position: absolute;
-    left: 100%;
-    animation-name: scroll_left;
-    animation-duration: 20s;
-    animation-timing-function: linear;
-    animation-iteration-count: infinite;
-    animation-delay: calc(var(--pos) * 6s);
+
+.technologies_list_cont {
+    width: 90%;
+    margin: 0 auto;
+    min-height: 25vh;
+    display: flex;
+    flex-direction: column;
+    gap: 40px;
+
 }
 
-.technologies_cont ul li h3{
+.technologies_list {
+    overflow: hidden;
+    position: relative;
+    height: 100px;
+    width: 100%;
+    z-index: 1;
+    --webkit-mask: linear-gradient(90deg, transparent, white 20%, white 80%, transparent);
+
+
+
+    mask: linear-gradient(90deg, transparent, white 20%, white 80%, transparent);
+}
+
+.technologies_list ul {
+    position: absolute;
+    display: flex;
+    gap: 40px;
+    list-style: none;
+}
+
+.technologies_list_0 ul {
+    left: 0;
+    animation: slideLeft 55s linear 1s infinite;
+}
+
+.technologies_list_1 ul {
+    right: 0;
+    animation: slideRight 25s linear 1s infinite;
+}
+
+.technologies_list_2 ul {
+    left: 0;
+    animation: slideLeft 20s linear 1s infinite;
+}
+
+.technologies_cont ul li h3 {
     padding: 10px 20px;
     font-size: 3rem;
     text-transform: uppercase;
@@ -56,13 +61,17 @@
 }
 
 
-@keyframes scroll_left {
-    to {
-        left: -100%;
+
+
+
+@keyframes slideLeft {
+    100% {
+        left: -100%
     }
 }
-@keyframes scroll_right {
-    to {
-        left: 100%;
+
+@keyframes slideRight {
+    100% {
+        right: -100%
     }
 }

@@ -42,18 +42,18 @@ const Technologies = () => {
       {isLoading ? (
         <p>Searching for technologies...</p>
       ) : (
-        <div>
+        <div className={styles.technologies_list_cont}>
           {technologyChunks.map((chunk, chunkIndex) => (
-            <ul
-              key={chunkIndex}
-              className={`${styles[`arr${chunkIndex + 1}`]}`}
-            >
-              {chunk.map((tech, index) => (
-                <li key={tech} style={{ "--pos": index + 1 }}>
-                  <h3>{tech}</h3>
-                </li>
-              ))}
-            </ul>
+            <div key={chunkIndex} className={`${styles.technologies_list} ${styles[`technologies_list_${chunkIndex}`]}`}>
+              <ul
+              >
+                {chunk.map((tech, index) => (
+                  <li key={tech}>
+                    <h3>{tech}</h3>
+                  </li>
+                ))}
+              </ul>
+            </div>
           ))}
         </div>
       )}
