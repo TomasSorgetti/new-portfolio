@@ -4,15 +4,28 @@ import { useEffect, useState } from "react";
 import styles from "./Technologies.module.css";
 import { getAllTechnologies } from "@/services/technologiesService";
 
+interface Technology {
+  id: number;
+  name: string;
+  createdAt?: string;
+  updatedAt?: string;
+}
+
+interface Data {
+  error: boolean;
+  message: string;
+  technologies: Technology[];
+}
 const Technologies = () => {
-  const [technologies, setTechnologies] = useState<string[]>([]);
+  const [technologies, setTechnologies] = useState<Data[]>([]);
   const [isLoading, setIsLoading] = useState<boolean>(true);
 
   useEffect(() => {
     const fetchTechnologies = async (): Promise<void> => {
       try {
-        const data: string[] = await getAllTechnologies();
-        setTechnologies(data);
+        const response: Data = await getAllTechnologies(); 
+        console.log(response.technologies);        
+        setTechnologies(response.technologies);
       } catch (error) {
         console.error("Error fetching technologies:", error);
       } finally {
@@ -35,6 +48,7 @@ const Technologies = () => {
     technologies,
     Math.ceil(technologies.length / 3)
   );
+  
 
   return (
     <section id="technologies" className={styles.technologies_cont}>
@@ -48,8 +62,8 @@ const Technologies = () => {
               <ul
               >
                 {chunk.map((tech, index) => (
-                  <li key={tech}>
-                    <h3>{tech}</h3>
+                  <li key={tech.id}>
+                    <h3>{tech.name}</h3>
                   </li>
                 ))}
               </ul>
