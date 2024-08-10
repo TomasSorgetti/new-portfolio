@@ -8,7 +8,7 @@ interface Project {
   name: string;
   description: JSX.Element;
   technologies: string[];
-  image: string;
+  image?: string;
   link: string;
 }
 
@@ -43,8 +43,8 @@ const Projects = () => {
                 <Image
                   src={project.image}
                   alt="project image"
-                  width={"640"}
-                  height={359}
+                  width={"445"}
+                  height={270}
                 />
                 <div className={styles.projects_text_container}>
                   <div className={styles.projects_text}>

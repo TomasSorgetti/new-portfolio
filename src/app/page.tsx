@@ -1,7 +1,7 @@
 "use client";
 
-import Technologies from "@/components/technologies/Technologies";
 import styles from "./page.module.css";
+import Technologies from "@/components/technologies/Technologies";
 import About from "@/components/about/About";
 import Contact from "@/components/contact/Contact";
 import Projects from "@/components/projects/Projects";

@@ -3,8 +3,13 @@
 
 
 export const getAllTechnologies = async (): Promise<string[]> => {
-    const response = await fetch("http://localhost:8000/api/technologies")
-    return await response.json()
+    // const response = await fetch("http://localhost:8000/api/technologies")
+    // return await response.json()
+
+    return {
+        error: false,
+        technologies: technologiesMocks
+    }
 };
 
 

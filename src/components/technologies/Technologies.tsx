@@ -1,8 +1,9 @@
 "use client";
-
+import { useAppDispatch, useAppSelector } from "@/redux/hooks";
 import { useEffect, useState } from "react";
 import styles from "./Technologies.module.css";
 import { getAllTechnologies } from "@/services/technologiesService";
+import { useGetAllTechnologiesQuery } from "@/redux/services/technologies.service";
 
 interface Technology {
   id: number;
@@ -23,8 +24,7 @@ const Technologies = () => {
   useEffect(() => {
     const fetchTechnologies = async (): Promise<void> => {
       try {
-        const response: Data = await getAllTechnologies(); 
-        console.log(response.technologies);        
+        const response: Data = await getAllTechnologies();
         setTechnologies(response.technologies);
       } catch (error) {
         console.error("Error fetching technologies:", error);
@@ -48,7 +48,6 @@ const Technologies = () => {
     technologies,
     Math.ceil(technologies.length / 3)
   );
-  
 
   return (
     <section id="technologies" className={styles.technologies_cont}>
@@ -57,18 +56,23 @@ const Technologies = () => {
         <p>Searching for technologies...</p>
       ) : (
         <div className={styles.technologies_list_cont}>
-          {technologyChunks.map((chunk, chunkIndex) => (
-            <div key={chunkIndex} className={`${styles.technologies_list} ${styles[`technologies_list_${chunkIndex}`]}`}>
-              <ul
+          {technologies.length > 0 &&
+            technologyChunks.map((chunk, chunkIndex) => (
+              <div
+                key={chunkIndex}
+                className={`${styles.technologies_list} ${
+                  styles[`technologies_list_${chunkIndex}`]
+                }`}
               >
-                {chunk.map((tech, index) => (
-                  <li key={tech.id}>
-                    <h3>{tech.name}</h3>
-                  </li>
-                ))}
-              </ul>
-            </div>
-          ))}
+                <ul>
+                  {chunk.map((tech, index) => (
+                    <li key={index}>
+                      <h3>{tech}</h3>
+                    </li>
+                  ))}
+                </ul>
+              </div>
+            ))}
         </div>
       )}
     </section>

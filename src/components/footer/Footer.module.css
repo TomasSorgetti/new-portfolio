@@ -39,7 +39,9 @@
     clip: rect(0, 0, 0, 0);
     border: 0;
 }
-
+.footer_cont nav p{
+    margin-top: 20px;
+}
 .footer_cont nav ul li a{
     text-decoration: none;
     color: #fff;

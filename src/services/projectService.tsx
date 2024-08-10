@@ -1,9 +1,12 @@
+import learningspark from "../assets/learningspark.png";
+import smalltribes from "../assets/smalltribesshop.png";
+import backend from "../assets/backend.png";
 interface Project {
   id: number;
   name: string;
   description: JSX.Element;
   technologies: string[];
-  image: string;
+  image?: string;
   link: string;
 }
 
@@ -11,7 +14,7 @@ export const getAllProjects = async (): Promise<Project[]> => {
   return new Promise((resolve) => {
     setTimeout(() => {
       resolve(projectMocks);
-    }, 1000);
+    }, 600);
   });
 };
 
@@ -29,8 +32,7 @@ const projectMocks = [
     ),
     link: "#",
     technologies: ["react", "tailwind"],
-    image:
-      "https://png.pngtree.com/thumb_back/fh260/background/20230611/pngtree-wolf-animals-images-wallpaper-for-pc-384x480-image_2916211.jpg",
+    image: learningspark,
   },
   {
     id: 2,
@@ -45,22 +47,20 @@ const projectMocks = [
     ),
     link: "#",
     technologies: ["wordpress", "woocommerce"],
-    image:
-      "https://png.pngtree.com/thumb_back/fh260/background/20230611/pngtree-wolf-animals-images-wallpaper-for-pc-384x480-image_2916211.jpg",
+    image: smalltribes,
   },
   {
     id: 3,
     name: "Backend con Node",
     description: (
       <p>
-        Lorem ipsum dolor sit, amet consectetur adipisicing elit. Dolorem maxime
-        molestiae placeat deserunt omnis suscipit eos illo, nostrum tempora est
-        aperiam ipsum fugit fuga nisi itaque cupiditate rem nihil quia.
+        API REST con node, donde se aplicó jwt para la{" "}
+        <strong>autenticación</strong>, manejo de errores, validaciones,{" "}
+        <strong>carga de imágenes y envio de mails</strong>.
       </p>
     ),
     link: "#",
     technologies: ["node", "express", "sequelize", "postgres"],
-    image:
-      "https://png.pngtree.com/thumb_back/fh260/background/20230611/pngtree-wolf-animals-images-wallpaper-for-pc-384x480-image_2916211.jpg",
+    image: backend,
   },
 ];
