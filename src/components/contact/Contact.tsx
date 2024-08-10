@@ -82,7 +82,7 @@ const Contact = () => {
         <span className={styles.stronger}>colaborar en un proyecto</span>,
         tienes preguntas sobre mi trabajo, o simplemente querés saludar, ¡No
         dudes en escribirme! Estoy acá para ayudarte con
-        <span className={styles.stronger}>cualquier consulta que tengas.</span>
+        <span className={styles.stronger}> cualquier consulta que tengas.</span>
       </p>
 
       <form onSubmit={handleSubmit}>

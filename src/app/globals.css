@@ -71,7 +71,7 @@ h2{
   text-transform: uppercase;
 }
 
-#about, #technologies, #projects, #proyectos{
+#about, #technologies, #projects, #proyectos, #contacto{
   max-width: 1100px;
   margin: 0 auto;
 }
@@ -82,4 +82,59 @@ h2{
 }
 #loader span{
   margin-right: 5px !important;
+}
+
+
+@media screen and (max-width: 1024px) {
+  #about,
+    #technologies,
+    #projects,
+    #proyectos,
+    #contacto{
+    max-width: 864px;
+  }
+}
+@media screen and (max-width: 768px) {
+  #about,
+    #technologies,
+    #projects,
+    #proyectos, 
+    #contacto{
+    max-width: 640px;
+  }
+}
+@media screen and (max-width: 640px) {
+  #about,
+    #technologies,
+    #projects,
+    #proyectos,
+    #contacto{
+    max-width: 560px;
+  }
+  h2{
+    font-size: 2.5rem;
+  }
+}
+@media screen and (max-width: 360px) {
+  #about,
+    #technologies,
+    #projects,
+    #proyectos,
+    #contacto{
+    max-width: 320px;
+  }
+  h1{
+    font-size: 1.3rem;
+    max-width: 280px;
+  }
+    
+  #title_name{
+    font-size: 2rem;
+  }
+  h2{
+    font-size: 1.8rem;
+  }
+  #footer_name{
+    font-size: 2.5rem;
+  }
 }

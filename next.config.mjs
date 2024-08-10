@@ -2,7 +2,7 @@
 const nextConfig = {
   reactStrictMode: false,
   images: {
-    domains: ["png.pngtree.com", "localhost"],
+    domains: ["png.pngtree.com", "localhost", "tomassorgetti.com.ar"],
   },
 };
 

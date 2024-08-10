@@ -19,14 +19,21 @@ const theme = {
 
 const ChatbotComponent = () => {
   const [isOpen, setIsOpen] = useState(false);
-  useEffect(() => {
-    const openChat = () => {
-      setTimeout(() => {
-        setIsOpen(true);
-      }, 500);
-    };
-    openChat();
-  }, []);
+  // useEffect(() => {
+  //   const openChat = () => {
+  //     setTimeout(() => {
+  //       setIsOpen(true);
+  //     }, 500);
+  //   };  // useEffect(() => {
+  //   const openChat = () => {
+  //     setTimeout(() => {
+  //       setIsOpen(true);
+  //     }, 500);
+  //   };
+  //   openChat();
+  // }, []);
+  //   openChat();
+  // }, []);
 
   return (
     <div>

@@ -52,3 +52,20 @@
     color: #FE0072;
     transition: 0.4s ease;
 }
+
+@media screen and (max-width: 768px) {
+    .footer_cont {
+        text-align: center;
+    }
+}
+@media screen and (max-width: 640px) {
+    .footer_cont{
+        gap: 40px;
+    }
+}
+@media screen and (max-width: 360px) {
+    .footer_cont nav ul{
+        flex-direction: column;
+        gap: 40px;
+    }
+}

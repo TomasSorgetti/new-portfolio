@@ -1,9 +1,6 @@
 .header{
     width: 100%;
-    margin-bottom: 320px;
-    /* background-image: url("../../assets/images/header_bg_desktop.png");
-    background-repeat: no-repeat;
-    background-size: cover; */
+    margin-bottom: 300px;
     text-align: center;
 }
 .header nav{
@@ -16,18 +13,18 @@
     font-size: 2rem;
     text-transform: uppercase;
 }
-.header nav ul{
+.menu{
     display: flex;
     gap: 30px;
     list-style: none;
 }
-.header nav ul li a{
+.menu li a{
     text-decoration: none;
     color: #fff;
     text-transform: uppercase;
     font-size: 1.2rem;
 }
-.header nav ul li a:hover {
+.menu li a:hover {
     color: #FE0072;
     transition: 0.4s ease;
 }
@@ -70,4 +67,104 @@
         box-shadow: 1px 0px 37px -6px rgba(184, 29, 99, 0.629);
         -webkit-box-shadow: 1px 0px 37px -6px rgba(184, 29, 99, 0.629);
         -moz-box-shadow: 1px 0px 37px -6px rgba(184, 29, 99, 0.629);
+}
+
+.hamburger{
+    display: none;
+    flex-direction: column;
+    gap: 12px;
+    cursor: pointer;
+    align-items: end;
+}
+.hamburger span{
+    width: 40px;
+    height: 4px;
+    border-radius: 2px;
+    background-color: white;
+    transition: 0.4s ease;
+}
+
+.hamburger.active span:nth-child(2) {
+    width: 35px;
+}
+
+.hamburger.active span:nth-child(3) {
+    width: 30px;
+}
+
+@media screen and (max-width: 1680px) {
+    .header {
+        margin-bottom: 260px;
+    }
+}
+@media screen and (max-width: 1400px) {
+    .header {
+        margin-bottom: 200px;
+    }
+}
+@media screen and (max-width: 1280px) {
+    .header {
+        margin-bottom: 160px;
+    }
+}
+@media screen and (max-width: 1024px) {
+    .header nav{
+        padding: 40px 80px;
+    }
+    .header nav span{
+        font-size: 1.6rem;
+    }
+}
+@media screen and (max-width: 768px) {
+    .hamburger{
+        display: flex;
+    }
+    .hamburger.active{
+        position: fixed;
+        z-index: 999999;
+        right: 80px;
+    }
+    .menu{
+        height: 100vh;
+        background-color: #080516;
+        width: 100%;
+        position: fixed;
+        z-index: 999991;
+        top: 0;
+        left: 0;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        gap: 80px;
+        transform: translateX(100%);
+        transition: 0.4s ease;
+    }
+    .menu.active{
+        transform: translateX(0);
+    }
+}
+@media screen and (max-width: 640px) {
+
+}
+@media screen and (max-width: 360px) {
+    .hamburger.active{
+        right: 20px;
+    }
+    .header nav{
+        padding: 40px 20px;
+    }
+    .header nav span{
+        font-size: 1.2rem;
+    }
+    .header section{
+        margin-top: 20px;
+        padding-top: 20px;
+    }
+    .header section h1{
+        font-size: 1.6rem;
+    }
+    .header section img{
+        width: 100%;
+        height: auto;
+    }
 }

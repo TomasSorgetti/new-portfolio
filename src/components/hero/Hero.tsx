@@ -1,20 +1,52 @@
 "use client";
+import { useState } from "react";
 import styles from "./Hero.module.css";
 import Image from "next/image";
 const Hero = () => {
+  const [active, setActive] = useState(false);
+
   return (
     <header className={styles.header} onContextMenu={(e) => e.preventDefault()}>
       <nav>
         <span>Tomas Sorgetti</span>
-        <ul>
+        <div
+          onClick={() => setActive(!active)}
+          className={`${styles.hamburger} ${active ? styles.active : ""}`}
+        >
+          <span></span>
+          <span></span>
+          <span></span>
+        </div>
+        <ul className={`${styles.menu} ${active ? styles.active : ""}`}>
           <li>
-            <a href="#about">Sobre mí</a>
+            <a
+              onClick={() => {
+                setActive(false);
+              }}
+              href="#about"
+            >
+              Sobre mí
+            </a>
           </li>
           <li>
-            <a href="#proyectos">Proyectos</a>
+            <a
+              onClick={() => {
+                setActive(false);
+              }}
+              href="#proyectos"
+            >
+              Proyectos
+            </a>
           </li>
           <li>
-            <a href="#contacto">Contacto</a>
+            <a
+              onClick={() => {
+                setActive(false);
+              }}
+              href="#contacto"
+            >
+              Contacto
+            </a>
           </li>
         </ul>
       </nav>

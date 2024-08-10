@@ -53,9 +53,8 @@
 .contact_container form .input_cont textarea{
     border-radius: 6px;
     max-width: 500px;
-    min-width: 500px;
-    max-height: 200px;
-    min-height: 200px;
+    height: 200px;
+    resize: none;
     background-color: transparent;
     border: 1px solid white;
     padding: 12px;
@@ -99,4 +98,16 @@
     box-shadow: 1px 0px 37px -6px rgba(184, 29, 99, 0.629);
     -webkit-box-shadow: 1px 0px 37px -6px rgba(184, 29, 99, 0.629);
     -moz-box-shadow: 1px 0px 37px -6px rgba(184, 29, 99, 0.629);
+}
+
+@media screen and (max-width: 640px) {
+    .contact_container p{
+        line-height: 28px;
+    }
+        
+}
+@media screen and (max-width: 360px) {
+    .contact_container form .input_cont input, .contact_container form .input_cont textarea, .contact_container form .input_cont label{
+        font-size: 1rem;
+    }
 }

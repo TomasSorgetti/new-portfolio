@@ -55,11 +55,11 @@ const Footer = () => {
             <a href="#contacto">Contacto</a>
           </li>
         </ul>
-        <p>
-          © {new Date().getFullYear()} Tomas Sorgetti. Todos los derechos
-          reservados.
-        </p>
       </nav>
+      <p>
+        © {new Date().getFullYear()} Tomas Sorgetti. Todos los derechos
+        reservados.
+      </p>
     </footer>
   );
 };

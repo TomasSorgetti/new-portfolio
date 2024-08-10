@@ -75,3 +75,31 @@
         right: -100%
     }
 }
+
+
+
+
+@media screen and (max-width: 640px) {
+    .technologies_cont ul li h3{
+        font-size: 2.5rem;
+    }
+    .technologies_list_0 ul {
+        left: 0;
+        animation: slideLeft 30s linear 1s infinite;
+    }
+
+    .technologies_list_1 ul {
+        right: 0;
+        animation: slideRight 20s linear 1s infinite;
+    }
+
+    .technologies_list_2 ul {
+        left: 0;
+        animation: slideLeft 10s linear 1s infinite;
+    }
+}
+@media screen and (max-width: 640px){
+    .technologies_cont ul li h3{
+        font-size: 1.8rem;
+    }
+}

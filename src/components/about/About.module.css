@@ -21,7 +21,7 @@
     color: white;
     display: flex;
     flex-direction: column;
-    justify-content: space-between;
+    justify-content: start;
     gap: 10px;
 }
 .about_text_container ul li{
@@ -56,4 +56,42 @@
     background-image: url("/icons/music.svg");
     background-repeat: no-repeat;
     background-size: cover;
+}
+
+
+
+@media screen and (max-width: 1024px) {
+    .about_text_container{
+        gap: 10px;
+    }
+    .text_container{
+        max-width: 480px;
+    }
+}
+@media screen and (max-width: 768px) {
+    .title_container, .text_container{
+        text-align: center;
+    }
+    .about_text_container{
+        flex-direction: column;
+        gap: 80px;
+        font-size: 1.3rem;
+    }
+}
+@media screen and (max-width: 640px) {
+    .text_container p {
+        line-height: 28px;
+    }
+    .about_text_container ul{
+        gap: 20px;
+    }
+}
+@media screen and (max-width: 360px) {
+    .title_container span{
+        font-size: 1.2rem;
+    }
+    .about_text_container{
+        font-size: 1rem;
+    }
+    
 }
