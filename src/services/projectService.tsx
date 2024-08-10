@@ -6,7 +6,7 @@ interface Project {
   name: string;
   description: JSX.Element;
   technologies: string[];
-  image?: string;
+  image?: any;
   link: string;
 }
 
@@ -30,7 +30,7 @@ const projectMocks = [
         para desarrollar el sitio <strong>completamente responsive.</strong>
       </p>
     ),
-    link: "#",
+    link: "https://www.learning-spark.com",
     technologies: ["react", "tailwind"],
     image: learningspark,
   },
@@ -45,7 +45,7 @@ const projectMocks = [
         online llamado ARK.
       </p>
     ),
-    link: "#",
+    link: "https://www.smalltribesshop.com",
     technologies: ["wordpress", "woocommerce"],
     image: smalltribes,
   },
@@ -59,7 +59,7 @@ const projectMocks = [
         <strong>carga de imágenes y envio de mails</strong>.
       </p>
     ),
-    link: "#",
+    link: "https://github.com/TomasSorgetti?tab=repositories",
     technologies: ["node", "express", "sequelize", "postgres"],
     image: backend,
   },

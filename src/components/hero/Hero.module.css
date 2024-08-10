@@ -54,4 +54,20 @@
     font-weight: 700;
     padding: 16px 40px;
     border-radius: 6px;
+    transition: 0.4s ease;
+    box-shadow: 1px 0px 37px -6px rgba(254, 0, 114, 0.668);
+        -webkit-box-shadow: 1px 0px 37px -6px rgba(254, 0, 114, 0.668);
+        -moz-box-shadow: 1px 0px 37px -6px rgba(254, 0, 114, 0.668);
+}
+.button:hover{
+    background-color: #f0378a;
+    box-shadow: 1px 0px 37px -6px rgba(238, 51, 135, 0.818);
+        -webkit-box-shadow: 1px 0px 37px -6px rgba(238, 51, 135, 0.818);
+        -moz-box-shadow: 1px 0px 37px -6px rgba(238, 51, 135, 0.818);
+}
+.button:focus{
+    background-color: #c51765;
+        box-shadow: 1px 0px 37px -6px rgba(184, 29, 99, 0.629);
+        -webkit-box-shadow: 1px 0px 37px -6px rgba(184, 29, 99, 0.629);
+        -moz-box-shadow: 1px 0px 37px -6px rgba(184, 29, 99, 0.629);
 }
