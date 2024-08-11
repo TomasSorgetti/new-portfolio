@@ -30,10 +30,11 @@ const Contact = () => {
     event.preventDefault();
 
     if (
-      (errors.name === "" && form.name !== "") ||
-      (errors.subject === "" && form.subject !== "") ||
-      (errors.email === "" && form.email !== "") ||
-      (errors.message === "" && form.message !== "")
+      errors.name === "" &&
+      form.name !== "" &&
+      errors.subject === "" && form.subject !== "" &&
+      errors.email === "" && form.email !== "" &&
+      errors.message === "" && form.message !== ""
     ) {
       setIsLoading(true);
       //TODO Envio de mail con emailjs momentaneo

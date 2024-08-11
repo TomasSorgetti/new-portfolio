@@ -1,15 +1,15 @@
 import type { Metadata } from "next";
-import { Inter } from "next/font/google";
+
 import "./globals.css";
 import Hero from "@/components/hero/Hero";
 import Footer from "@/components/footer/Footer";
 
 
-const inter = Inter({ subsets: ["latin"] });
 
 export const metadata: Metadata = {
-  title: "Tomás Sorgetti - FullStack Developer",
-  description: "Portfolio de Tomás Sorgetti, un FullStack Developer",
+  title: "Tomás Sorgetti - Web Developer",
+  description: "Diseñador y desarrollador web con experiencia como luthier",
+  keywords:"diseñador, desarrollador web, frontend, fullstack, backend, software, developer, software developer, jr, junior, software engineer, web developer, react, node, figma, react developer",
 };
 
 export default function RootLayout({
@@ -23,7 +23,7 @@ export default function RootLayout({
         <link rel="shortcut icon" href="icon.png" type="image/x-icon" />
       </head>
       <body
-        className={`${inter.className} main_body`}
+        className={`main_body`}
         
       >
         <Hero />
