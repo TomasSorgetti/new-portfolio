@@ -63,10 +63,23 @@
 @media screen and (max-width: 1680px) {}
 @media screen and (max-width: 1440px) {}
 @media screen and (max-width: 1280px) {}
-@media screen and (max-width: 1024px) {}
+@media screen and (max-width: 1024px) {
+    .projects_list_item {
+            gap: 6px;
+        }
+    .projects_text_container{
+        padding: 0;
+    }
+    .technologies_list li{
+        font-size: 0.8rem;
+    }
+}
 @media screen and (max-width: 768px) {
     .projects_container{
         text-align: center;
+    }
+    .projects_text_container{
+        padding: 24px 40px;
     }
     .projects_list_item img{
         width: 100%;
@@ -77,6 +90,7 @@
     }
     .projects_list_item a{
         flex-direction: column;
+        gap: 0;
         height: auto;
         background-color: #0a051e8e;
             box-shadow: 1px 0px 37px -6px rgba(254, 0, 114, 0.34);
@@ -90,7 +104,7 @@
 }
 @media screen and (max-width: 640px) {
     .projects_text{
-        line-height: 24px;
+        line-height: 28px;
     }
 }
 @media screen and (max-width: 360px) {
@@ -100,5 +114,12 @@
     .projects_container h2{
         margin-top: 100px;
         margin-bottom: 60px;
+    }
+    .projects_text_container{
+        padding: 24px;
+    }
+    .projects_text p{
+        line-height: 24px;
+        font-size: 1rem;
     }
 }

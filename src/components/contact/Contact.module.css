@@ -6,6 +6,7 @@
 .contact_container p{
     max-width: 660px;
     margin: 40px auto;
+    line-height: 28px;
 }
 
 
@@ -102,12 +103,17 @@
 
 @media screen and (max-width: 640px) {
     .contact_container p{
-        line-height: 28px;
+        font-size: 1.4rem;
+        line-height: 34px;
     }
         
 }
 @media screen and (max-width: 360px) {
     .contact_container form .input_cont input, .contact_container form .input_cont textarea, .contact_container form .input_cont label{
         font-size: 1rem;
+    }
+     .contact_container p{
+        font-size: 1rem;
+        line-height: 30px;
     }
 }

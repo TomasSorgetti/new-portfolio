@@ -142,8 +142,18 @@
     .menu.active{
         transform: translateX(0);
     }
+    .header section img{
+        width: 100%;
+        height: auto;
+    }
 }
 @media screen and (max-width: 640px) {
+    .header nav{
+        padding: 40px 20px;
+    }
+    .hamburger.active{
+        right: 20px;
+    }
 
 }
 @media screen and (max-width: 360px) {
@@ -159,12 +169,5 @@
     .header section{
         margin-top: 20px;
         padding-top: 20px;
-    }
-    .header section h1{
-        font-size: 1.6rem;
-    }
-    .header section img{
-        width: 100%;
-        height: auto;
-    }
+    }    
 }

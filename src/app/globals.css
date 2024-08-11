@@ -1,21 +1,21 @@
 @font-face {
   font-family: "Days One";
-  src: url("../assets/fonts/DaysOne-Regular.ttf");
+  src: url("/fonts/DaysOne-Regular.ttf");
 }
   @font-face {
   font-family: "Bai Jamjuree";
   font-weight: 500;
-  src: url("../assets/fonts/BaiJamjuree-Regular.ttf");
+  src: url("/fonts/BaiJamjuree-Regular.ttf");
 }
   @font-face {
   font-family: "Bai Jamjuree";
   font-weight: 600;
-  src: url("../assets/fonts/BaiJamjuree-SemiBold.ttf");
+  src: url("/fonts/BaiJamjuree-SemiBold.ttf");
 }
   @font-face {
   font-family: "Bai Jamjuree";
   font-weight: 700;
-  src: url("../assets/fonts/BaiJamjuree-Bold.ttf");
+  src: url("/fonts/BaiJamjuree-Bold.ttf");
 }
 
 
@@ -111,8 +111,13 @@ h2{
     #contacto{
     max-width: 560px;
   }
-  h2{
-    font-size: 2.5rem;
+  h1{
+    font-size: 1.4rem;
+    max-width: 280px;
+  }
+    
+  #title_name{
+    font-size: 2.2rem;
   }
 }
 @media screen and (max-width: 360px) {
