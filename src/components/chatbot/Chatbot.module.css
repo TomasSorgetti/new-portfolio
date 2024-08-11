@@ -29,3 +29,10 @@
     transition: 1s ease;
     z-index: 5;
 }
+
+@media screen and (max-width: 768px) {
+    .container{
+        display: none;
+    }
+    
+}

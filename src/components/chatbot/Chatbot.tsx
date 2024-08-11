@@ -34,9 +34,10 @@ const ChatbotComponent = () => {
   // }, []);
   //   openChat();
   // }, []);
+  console.log("TODO Chatbot deprecated");
 
   return (
-    <div>
+    <div className={styles.container}>
       <button className={styles.button} onClick={() => setIsOpen(!isOpen)}>
         Chat
       </button>

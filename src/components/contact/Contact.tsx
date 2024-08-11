@@ -2,10 +2,11 @@
 
 import React, { useState } from "react";
 import styles from "./Contact.module.css";
-import { sendEmail } from "@/services/sendmail";
+// import { sendEmail } from "@/services/sendmail";
 import { ToastContainer, toast } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
 import ClipLoader from "react-spinners/ClipLoader";
+import emailjs from "emailjs-com";
 
 const Contact = () => {
   const [isLoading, setIsLoading] = useState(false);
@@ -35,30 +36,62 @@ const Contact = () => {
       (errors.message === "" && form.message !== "")
     ) {
       setIsLoading(true);
-      try {
-        const response = await sendEmail(form);
-        if (response) {
+      //TODO Envio de mail con emailjs momentaneo
+      //TODO En el futuro cambiar por fetch al back
+      emailjs
+        .sendForm(
+          "service_ilfyop4",
+          "template_bc0qyva",
+          event.target,
+          "4IAZoxJjzZX5E3IYV"
+        )
+        .then((res) => {
+          if (res) {
+            setIsLoading(false);
+            setForm({
+              name: "",
+              subject: "",
+              email: "",
+              message: "",
+            });
+            toast.success("Se envio el correo con éxito!", {
+              position: "bottom-left",
+            });
+          }
+        })
+        .catch((err) => {
+          console.log(err);
           setIsLoading(false);
-          setForm({
-            name: "",
-            subject: "",
-            email: "",
-            message: "",
-          });
-          toast.success("Se envio el correo con éxito!", {
+          toast.error("Ocurrio un error al enviar el correo!", {
             position: "bottom-left",
           });
-          console.log("Form submitted successfully:", response);
-        }
-      } catch (error) {
-        setIsLoading(false);
-        toast.error("Ocurrio un error al enviar el correo!", {
-          position: "bottom-left",
         });
-        console.error("Error submitting form:", error);
-      } finally {
-        setIsLoading(false);
-      }
+
+      //TODO comentario envio de mail al backend
+      // try {
+      //   const response = await sendEmail(form);
+      //   if (response) {
+      //     setIsLoading(false);
+      //     setForm({
+      //       name: "",
+      //       subject: "",
+      //       email: "",
+      //       message: "",
+      //     });
+      //     toast.success("Se envio el correo con éxito!", {
+      //       position: "bottom-left",
+      //     });
+      //     console.log("Form submitted successfully:", response);
+      //   }
+      // } catch (error) {
+      //   setIsLoading(false);
+      //   toast.error("Ocurrio un error al enviar el correo!", {
+      //     position: "bottom-left",
+      //   });
+      //   console.error("Error submitting form:", error);
+      // } finally {
+      //   setIsLoading(false);
+      // }
     }
   };
 

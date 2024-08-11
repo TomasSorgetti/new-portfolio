@@ -61,6 +61,7 @@ const Hero = () => {
           alt="tomas sorgetti looking to a side"
           width={"606"}
           height={606}
+          priority
         />
         <a className={styles.button} href="#contacto">
           Contactáme
