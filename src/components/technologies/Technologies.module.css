@@ -1,11 +1,13 @@
 .technologies_cont {
-    padding: 80px 0;
+    padding-top: 80px;
+    padding-bottom: 180px;
     text-align: center;
     width: 100%;
 }
 
 .technologies_cont h2 {
     margin: 80px 0;
+    color: #FE0072;
 }
 
 .technologies_list_cont {
@@ -81,7 +83,7 @@
 
 @media screen and (max-width: 640px) {
     .technologies_cont ul li h3{
-        font-size: 2.5rem;
+        font-size: 2.2rem;
     }
     .technologies_list_0 ul {
         left: 0;
@@ -98,7 +100,7 @@
         animation: slideLeft 10s linear 1s infinite;
     }
 }
-@media screen and (max-width: 640px){
+@media screen and (max-width: 460px){
     .technologies_cont ul li h3{
         font-size: 1.8rem;
     }

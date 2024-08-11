@@ -31,34 +31,12 @@
     display: flex;
     align-items: center;
     gap: 10px;
+    color: white;
+    font-weight: 600;
 }
 .stronger{
     color: #FE0072;
     font-weight: 700;
-}
-.icon{
-    width: 46px;
-    height: 46px;
-}
-.pc{
-    background-image: url("/icons/pc.svg");
-    background-repeat: no-repeat;
-    background-size: cover;
-}
-.ide{
-    background-image: url("/icons/ide.svg");
-    background-repeat: no-repeat;
-    background-size: cover;
-}
-.hobby{
-    background-image: url("/icons/hobby.svg");
-    background-repeat: no-repeat;
-    background-size: cover;
-}
-.music{
-    background-image: url("/icons/music.svg");
-    background-repeat: no-repeat;
-    background-size: cover;
 }
 
 

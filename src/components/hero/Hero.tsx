@@ -57,7 +57,7 @@ const Hero = () => {
           <span className={styles.fullstack}>Full Stack</span>
         </h1>
         <Image
-          src="/hero.png"
+          src="/images/hero.png"
           alt="tomas sorgetti looking to a side"
           width={"606"}
           height={606}

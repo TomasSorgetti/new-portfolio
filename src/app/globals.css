@@ -40,7 +40,7 @@ html{
 .main_body{
   display: flex;
   flex-direction: column;
-  background-image: url("/bg_filter.png");
+  background-image: url("/images/bg_filter.png");
   background-repeat: no-repeat;
   background-size: cover;
 }
@@ -115,18 +115,20 @@ h2{
     font-size: 1.4rem;
     max-width: 280px;
   }
-    
   #title_name{
     font-size: 2.2rem;
   }
+  h2{
+    font-size: 2.2rem;
+  }
 }
-@media screen and (max-width: 360px) {
+@media screen and (max-width: 460px) {
   #about,
     #technologies,
     #projects,
     #proyectos,
     #contacto{
-    max-width: 320px;
+    max-width: 420px;
   }
   h1{
     font-size: 1.3rem;
@@ -141,5 +143,17 @@ h2{
   }
   #footer_name{
     font-size: 2.5rem;
+  }
+}
+@media screen and (max-width: 360px){
+  #about,
+    #technologies,
+    #projects,
+    #proyectos,
+    #contacto {
+      max-width: 320px;
+    }
+  h2{
+    font-size: 1.7rem;
   }
 }

@@ -1,9 +1,7 @@
 "use client";
-import { useAppDispatch, useAppSelector } from "@/redux/hooks";
 import { useEffect, useState } from "react";
 import styles from "./Technologies.module.css";
 import { getAllTechnologies } from "@/services/technologiesService";
-import { useGetAllTechnologiesQuery } from "@/redux/services/technologies.service";
 
 interface Technology {
   id: number;
@@ -18,14 +16,14 @@ interface Data {
   technologies: Technology[];
 }
 const Technologies = () => {
-  const [technologies, setTechnologies] = useState<Data[]>([]);
+  const [technologies, setTechnologies] = useState<string[]>([]);
   const [isLoading, setIsLoading] = useState<boolean>(true);
 
   useEffect(() => {
     const fetchTechnologies = async (): Promise<void> => {
       try {
-        const response: Data = await getAllTechnologies();
-        setTechnologies(response.technologies);
+        const response: string[] = await getAllTechnologies();
+        setTechnologies(response);
       } catch (error) {
         console.error("Error fetching technologies:", error);
       } finally {

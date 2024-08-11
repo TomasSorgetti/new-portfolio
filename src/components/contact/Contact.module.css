@@ -1,6 +1,5 @@
 .contact_container {
     text-align: center;
-    margin-top: 80px;
 }
 
 .contact_container p{
@@ -61,6 +60,11 @@
     padding: 12px;
     font-size: 1.25rem;
     color: white;
+}
+.recaptcha_cont{
+    width: 100%;
+    display: flex;
+    justify-content: start;
 }
 .contact_container form button{
     margin-top: 20px;

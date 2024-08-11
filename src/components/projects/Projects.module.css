@@ -107,7 +107,7 @@
         line-height: 28px;
     }
 }
-@media screen and (max-width: 360px) {
+@media screen and (max-width: 460px) {
     .projects_list_item{
         margin-bottom: 20px;
     }

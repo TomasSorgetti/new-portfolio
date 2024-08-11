@@ -41,7 +41,7 @@ const Projects = () => {
             <li className={styles.projects_list_item} key={project.id}>
               <a href={project.link} target="_blank">
                 <Image
-                  src={project.image}
+                  src={project.image || "../../assets/backend.png"}
                   alt="project image"
                   width={"445"}
                   height={270}

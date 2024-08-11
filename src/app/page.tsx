@@ -5,12 +5,12 @@ import Technologies from "@/components/technologies/Technologies";
 import About from "@/components/about/About";
 import Contact from "@/components/contact/Contact";
 import Projects from "@/components/projects/Projects";
-import ChatbotComponent from "@/components/chatbot/Chatbot";
+// import ChatbotComponent from "@/components/chatbot/Chatbot";
 
 export default function Home() {
   return (
     <main className={styles.main} onContextMenu={(e) => e.preventDefault()}>
-      <ChatbotComponent />
+      {/* <ChatbotComponent /> */}
       <About />
       <Projects />
       <Technologies />

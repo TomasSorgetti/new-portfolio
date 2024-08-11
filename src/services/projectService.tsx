@@ -1,6 +1,6 @@
-import learningspark from "../assets/learningspark.png";
-import smalltribes from "../assets/smalltribesshop.png";
-import backend from "../assets/backend.png";
+import learningspark from "images/learningspark.png";
+import smalltribes from "images/smalltribesshop.png";
+import backend from "images/backend.png";
 interface Project {
   id: number;
   name: string;
@@ -32,7 +32,7 @@ const projectMocks = [
     ),
     link: "https://www.learning-spark.com",
     technologies: ["react", "tailwind"],
-    image: learningspark,
+    image: "/images/learningspark.png",
   },
   {
     id: 2,
@@ -47,7 +47,7 @@ const projectMocks = [
     ),
     link: "https://www.smalltribesshop.com",
     technologies: ["wordpress", "woocommerce"],
-    image: smalltribes,
+    image: "/images/smalltribesshop.png",
   },
   {
     id: 3,
@@ -61,6 +61,6 @@ const projectMocks = [
     ),
     link: "https://github.com/TomasSorgetti?tab=repositories",
     technologies: ["node", "express", "sequelize", "postgres"],
-    image: backend,
+    image: "/images/backend.png",
   },
 ];

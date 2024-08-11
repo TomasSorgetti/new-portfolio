@@ -7,9 +7,15 @@ import { ToastContainer, toast } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
 import ClipLoader from "react-spinners/ClipLoader";
 import emailjs from "emailjs-com";
+import ReCAPTCHA from "react-google-recaptcha";
 
 const Contact = () => {
   const [isLoading, setIsLoading] = useState(false);
+  const [captchaValue, setCaptchaValue] = useState<string | null>(null);
+
+  const handleCaptchaChange = (value: string | null) => {
+    setCaptchaValue(value);
+  };
   const [form, setForm] = useState({
     name: "",
     subject: "",
@@ -30,11 +36,15 @@ const Contact = () => {
     event.preventDefault();
 
     if (
+      captchaValue &&
       errors.name === "" &&
       form.name !== "" &&
-      errors.subject === "" && form.subject !== "" &&
-      errors.email === "" && form.email !== "" &&
-      errors.message === "" && form.message !== ""
+      errors.subject === "" &&
+      form.subject !== "" &&
+      errors.email === "" &&
+      form.email !== "" &&
+      errors.message === "" &&
+      form.message !== ""
     ) {
       setIsLoading(true);
       //TODO Envio de mail con emailjs momentaneo
@@ -157,6 +167,12 @@ const Contact = () => {
             onChange={handleChange}
             placeholder="Tu mensaje"
             value={form.message}
+          />
+        </div>
+        <div className={styles.recaptcha_cont}>
+          <ReCAPTCHA
+            sitekey="6LcSayQqAAAAABeJbN00eADTqtpJ3LLWV-hIeYHi"
+            onChange={handleCaptchaChange}
           />
         </div>
         <button

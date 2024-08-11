@@ -1,4 +1,5 @@
-import styles from "./About.module.css"
+import Image from "next/image";
+import styles from "./About.module.css";
 const About = () => {
   return (
     <section id="about" className={styles.container}>
@@ -29,26 +30,49 @@ const About = () => {
         </div>
         <ul>
           <li>
-            {" "}
-            <span className={`${styles.icon} ${styles.pc}`}></span>{" "}
+            <Image
+              src="/icons/pc.svg"
+              alt="pc logo"
+              width={46}
+              height={46}
+              priority
+            />
             <span>Windows & aprendiendo Linux</span>
           </li>
           <li>
-            <span className={`${styles.icon} ${styles.ide}`}></span>
+            <Image
+              src="/icons/ide.svg"
+              alt="ide logo"
+              width={46}
+              height={46}
+              priority
+            />
             <span>VSCode & aprendiendo NVIM</span>
           </li>
           <li>
-            <span className={`${styles.icon} ${styles.hobby}`}></span>
+            <Image
+              src="/icons/hobby.svg"
+              alt="hobby logo"
+              width={46}
+              height={46}
+              priority
+            />
             <span>Cats, Music & VideoGames</span>
           </li>
           <li>
-            <span className={`${styles.icon} ${styles.music}`}></span>
+            <Image
+              src="/icons/music.svg"
+              alt="music logo"
+              width={46}
+              height={46}
+              priority
+            />
             <span>Rock, Jazz, Blues, Classical</span>
           </li>
         </ul>
       </div>
     </section>
   );
-}
+};
 
-export default About
+export default About;
