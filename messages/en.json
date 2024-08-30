@@ -1,0 +1,46 @@
+{
+  "Hero": {
+    "title": "Designer & Web Developer",
+    "title_strong": "Full Stack",
+    "description1": "Diseñador y Desarrollador FullStack",
+    "description2": "con una formación técnica en electromecánica y experiencia como",
+    "description3": "luthier",
+    "description4": "de instrumentos de cuerda.",
+    "button": "Contact",
+    "projects":"Projects",
+    "about":"About",
+    "contact":"Contact",
+    "download":"Download CV"
+  },
+  "Projects": {
+    "title": "Proyectos",
+    "description": "replace this text",
+    "button": "Ver GitHub"
+  },
+  "About": {
+    "title": "Sobre mí",
+    "description1": "replace this text",
+    "description2": "replace this text",
+    "pc": "Windows & aprendiendo Linux",
+    "ide": "VSCode & aprendiendo NVIM",
+    "hobby": "Cats, Music & VideoGames",
+    "music": "Rock, Jazz, Blues, Classical"
+  },
+  "technologies": {
+    "title": "Tecnologías",
+    "description": "replace this text"
+  },
+  "contact": {
+    "title": "Tecnologías",
+    "description": "replace this text",
+    "nameLabel": "Nombre:",
+    "namePlaceholder": "Juan Perez",
+    "aboutLabel": "Asunto:",
+    "aboutPlaceholder": "Entrevista",
+    "emailLabel": "Email:",
+    "emailPlaceholder": "juanperez@mail.com",
+    "messageLabel": "Mensaje:",
+    "messagePlaceholder": "Tu mensaje",
+    "button": "Contactar"
+  }
+}

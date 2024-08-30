@@ -25,50 +25,48 @@
     font-size: 1.2rem;
 }
 .menu li a:hover {
-    color: #FE0072;
+    color: #CB1E52;
     transition: 0.4s ease;
 }
 
 .header section {
     padding-top: 120px;
     display: flex;
-    flex-direction: column;
     margin: 0 auto;
     align-items: center;
     justify-content: center;
     height: 100%;
     gap: 20px;
+    text-align: left;
+}
+.header section h1{
     text-transform: uppercase;
+    max-width: 620px;
+}
+.header section p{
+    width: 100%;
+    max-width: 467px;
+    margin: 40px 0;
+}
+.fullstack{
+    color: #CB1E52;
+}
+.buttons{
+    display: flex;
+    gap: 20px;
+    align-items: center;
 }
 
-.fullstack{
-    color: #FE0072;
-}
-.button{
-    background-color: #FE0072;
+.contact{
     color: white;
     text-decoration: none;
-    font-weight: 700;
-    padding: 16px 40px;
-    border-radius: 6px;
+    border: 2px solid #CB1E52;
+    background-color: #CB1E52;
+    border-radius: 100px;
+    padding: 12px 24px;
+    font-family: "Days One", sans-serif;
     transition: 0.4s ease;
-    box-shadow: 1px 0px 37px -6px rgba(254, 0, 114, 0.668);
-        -webkit-box-shadow: 1px 0px 37px -6px rgba(254, 0, 114, 0.668);
-        -moz-box-shadow: 1px 0px 37px -6px rgba(254, 0, 114, 0.668);
 }
-.button:hover{
-    background-color: #f0378a;
-    box-shadow: 1px 0px 37px -6px rgba(238, 51, 135, 0.818);
-        -webkit-box-shadow: 1px 0px 37px -6px rgba(238, 51, 135, 0.818);
-        -moz-box-shadow: 1px 0px 37px -6px rgba(238, 51, 135, 0.818);
-}
-.button:focus{
-    background-color: #c51765;
-        box-shadow: 1px 0px 37px -6px rgba(184, 29, 99, 0.629);
-        -webkit-box-shadow: 1px 0px 37px -6px rgba(184, 29, 99, 0.629);
-        -moz-box-shadow: 1px 0px 37px -6px rgba(184, 29, 99, 0.629);
-}
-
 .hamburger{
     display: none;
     flex-direction: column;
