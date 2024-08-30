@@ -1,6 +1,6 @@
 "use client";
 import { useEffect, useState } from "react";
-import styles from "./Technologies.module.css";
+import styles from "./Technologies.module.scss";
 import { getAllTechnologies } from "@/services/technologiesService";
 
 interface Technology {
@@ -50,6 +50,11 @@ const Technologies = () => {
   return (
     <section id="technologies" className={styles.technologies_cont}>
       <h2>Tecnologías</h2>
+      <p>
+        Mi <strong>stack tecnológico</strong> se centra en{" "}
+        <strong>React / Node</strong>, aunque me encanta aprender sobre otras
+        tecnologías y estoy <strong>constantemente aprendiendo.</strong>
+      </p>
       {isLoading ? (
         <p>Searching for technologies...</p>
       ) : (
