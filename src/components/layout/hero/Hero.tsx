@@ -13,12 +13,12 @@ const Hero = () => {
       <div>
         <h1 className={styles.title} id="title_job">
           {t("title")}{" "}
-          <span className={styles.fullstack}>{t("title_strong")}</span>
+          <strong className={styles.fullstack}>{t("title_strong")}</strong>
         </h1>
         <p>
-          <span className={styles.fullstack}>{t("description1")}</span>{" "}
+          <strong className={styles.fullstack}>{t("description1")}</strong>{" "}
           {t("description2")}{" "}
-          <span className={styles.fullstack}>{t("description3")}</span>{" "}
+          <strong className={styles.fullstack}>{t("description3")}</strong>{" "}
           {t("description4")}
         </p>
         <div className={styles.buttons}>
