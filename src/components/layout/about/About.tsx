@@ -31,7 +31,7 @@ const About = () => {
         <ul>
           <li>
             <Image
-              src="/icons/pc.svg"
+              src="/images/pc.png"
               alt="pc logo"
               width={46}
               height={46}
@@ -41,7 +41,7 @@ const About = () => {
           </li>
           <li>
             <Image
-              src="/icons/ide.svg"
+              src="/images/ide.png"
               alt="ide logo"
               width={46}
               height={46}
@@ -51,7 +51,7 @@ const About = () => {
           </li>
           <li>
             <Image
-              src="/icons/hobby.svg"
+              src="/images/hobby.png"
               alt="hobby logo"
               width={46}
               height={46}
@@ -61,7 +61,7 @@ const About = () => {
           </li>
           <li>
             <Image
-              src="/icons/music.svg"
+              src="/images/music.png"
               alt="music logo"
               width={46}
               height={46}

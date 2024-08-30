@@ -1,0 +1,14 @@
+@import "../../../styles/mixins.scss";
+@import "../../../styles/variables.scss";
+
+.lang_button{
+    background-color: transparent;
+    border: none;
+    color: $light-text-color;
+    font-size: 1.15rem;
+    cursor: pointer;
+}
+.lang_button.active{
+    color: $primary-color;
+    font-weight: 800;
+}

@@ -1,10 +1,10 @@
 "use client";
 
-import styles from "./page.module.css";
-import Technologies from "@/components/technologies/Technologies";
-import About from "@/components/about/About";
-import Contact from "@/components/contact/Contact";
-import Projects from "@/components/projects/Projects";
+import styles from "./page.module.scss";
+import Technologies from "../../components/layout/technologies/Technologies";
+import About from "../../components/layout/about/About";
+import Contact from "../../components/layout/contact/Contact";
+import Projects from "../../components/layout/projects/Projects";
 // import ChatbotComponent from "@/components/chatbot/Chatbot";
 
 export default function Home() {

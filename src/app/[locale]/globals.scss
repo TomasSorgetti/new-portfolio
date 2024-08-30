@@ -1,0 +1,186 @@
+@font-face {
+    font-family: "Days One";
+    src: url("/fonts/DaysOne-Regular.ttf");
+}
+
+@font-face {
+    font-family: "Bai Jamjuree";
+    font-weight: 500;
+    src: url("/fonts/BaiJamjuree-Regular.ttf");
+}
+
+@font-face {
+    font-family: "Bai Jamjuree";
+    font-weight: 600;
+    src: url("/fonts/BaiJamjuree-SemiBold.ttf");
+}
+
+@font-face {
+    font-family: "Bai Jamjuree";
+    font-weight: 700;
+    src: url("/fonts/BaiJamjuree-Bold.ttf");
+}
+
+
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    user-select: none;
+}
+
+:root {
+    scroll-behavior: smooth;
+}
+
+html {
+    color: #D1D1D1;
+    font-family: 'Bai Jamjuree', sans-serif;
+    font-weight: 500;
+    font-size: 1.25rem;
+    background-image: url("../../../public/images/bg_filter.png");
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.main_body {
+    display: flex;
+    flex-direction: column;
+}
+
+h1 {
+    font-family: 'Days One', sans-serif;
+    font-size: 3rem;
+    color: white;
+}
+
+#footer_name {
+    font-family: 'Days One', sans-serif;
+    font-size: 3.5rem;
+    color: white;
+    text-transform: uppercase;
+}
+
+h2,
+h3,
+h4,
+h5,
+h6 {
+    font-family: 'Days One', sans-serif;
+    color: white;
+}
+
+h2 {
+    font-size: 3rem;
+    text-transform: uppercase;
+}
+
+#about,
+#technologies,
+#projects,
+#proyectos,
+#contacto {
+    max-width: 1100px;
+    margin: 0 auto;
+}
+
+#loader {
+    display: flex !important;
+    justify-content: center !important;
+    align-items: center !important;
+}
+
+#loader span {
+    margin-right: 5px !important;
+}
+
+
+@media screen and (max-width: 1024px) {
+
+    #about,
+    #technologies,
+    #projects,
+    #proyectos,
+    #contacto {
+        max-width: 864px;
+    }
+}
+
+@media screen and (max-width: 768px) {
+
+    #about,
+    #technologies,
+    #projects,
+    #proyectos,
+    #contacto {
+        max-width: 640px;
+    }
+}
+
+@media screen and (max-width: 640px) {
+
+    #about,
+    #technologies,
+    #projects,
+    #proyectos,
+    #contacto {
+        max-width: 560px;
+    }
+
+    h1 {
+        font-size: 1.4rem;
+        max-width: 280px;
+    }
+
+    #title_name {
+        font-size: 2.2rem;
+    }
+
+    h2 {
+        font-size: 2.2rem;
+    }
+}
+
+@media screen and (max-width: 460px) {
+
+    #about,
+    #technologies,
+    #projects,
+    #proyectos,
+    #contacto {
+        max-width: 420px;
+    }
+
+    h1 {
+        font-size: 1.3rem;
+        max-width: 280px;
+    }
+
+    #title_name {
+        font-size: 2rem;
+    }
+
+    h2 {
+        font-size: 1.8rem;
+    }
+
+    #footer_name {
+        font-size: 2.5rem;
+    }
+}
+
+@media screen and (max-width: 360px) {
+
+    #about,
+    #technologies,
+    #projects,
+    #proyectos,
+    #contacto {
+        max-width: 320px;
+    }
+
+    h2 {
+        font-size: 1.7rem;
+    }
+}
