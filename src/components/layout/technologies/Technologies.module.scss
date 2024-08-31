@@ -1,0 +1,101 @@
+.technologies_cont {
+    padding-top: 80px;
+    padding-bottom: 180px;
+    text-align: left;
+    width: 100%;
+    p{
+        max-width: 700px;
+        margin: 40px 0;
+        strong{
+            color: #FE0072;
+        }
+    }
+    .technologies_list_cont {
+        width: 90%;
+        margin: 0 auto;
+        min-height: 25vh;
+        display: flex;
+        flex-direction: column;
+        gap: 40px;
+    
+    }
+    
+    .technologies_list {
+        overflow: hidden;
+        position: relative;
+        height: 100px;
+        width: 100%;
+        z-index: 1;
+        --webkit-mask: linear-gradient(90deg, transparent, white 20%, white 80%, transparent);  
+        mask: linear-gradient(90deg, transparent, white 20%, white 80%, transparent);
+        ul {
+            position: absolute;
+            display: flex;
+            gap: 40px;
+            list-style: none;
+        }
+    }
+    .technologies_list_0 ul {
+        left: 0;
+        animation: slideLeft 55s linear 1s infinite;
+    }
+    
+    .technologies_list_1 ul {
+        right: 0;
+        animation: slideRight 25s linear 1s infinite;
+    }
+    .technologies_list_2 ul {
+        left: 0;
+        animation: slideLeft 20s linear 1s infinite;
+    }
+    ul li h3 {
+        padding: 10px 20px;
+        font-size: 3rem;
+        text-transform: uppercase;
+        text-shadow: 0px 3px 8px rgb(132, 57, 249);
+    }
+}
+
+
+
+
+
+@keyframes slideLeft {
+    100% {
+        left: -100%
+    }
+}
+
+@keyframes slideRight {
+    100% {
+        right: -100%
+    }
+}
+
+
+
+
+@media screen and (max-width: 640px) {
+    .technologies_cont ul li h3{
+        font-size: 2.2rem;
+    }
+    .technologies_list_0 ul {
+        left: 0;
+        animation: slideLeft 30s linear 1s infinite;
+    }
+
+    .technologies_list_1 ul {
+        right: 0;
+        animation: slideRight 20s linear 1s infinite;
+    }
+
+    .technologies_list_2 ul {
+        left: 0;
+        animation: slideLeft 10s linear 1s infinite;
+    }
+}
+@media screen and (max-width: 460px){
+    .technologies_cont ul li h3{
+        font-size: 1.8rem;
+    }
+}

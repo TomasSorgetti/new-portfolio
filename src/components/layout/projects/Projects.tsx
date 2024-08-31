@@ -1,72 +1,44 @@
 "use client";
-import { getAllProjects } from "@/services/projectService";
-import Image from "next/image";
-import { useEffect, useState } from "react";
-import styles from "./Projects.module.css";
+import { projectMocks } from "@/services/projectService";
+import styles from "./Projects.module.scss";
+import ProjectCard from "@/components/ui/project_card/ProjectCard";
+import LinkedButton from "@/components/ui/linked_button/linkedButton";
 interface Project {
   id: number;
   name: string;
   description: JSX.Element;
-  technologies: string[];
-  image?: string;
+  image: string;
   link: string;
+  github: string;
+  technologies: string[];
 }
 
 const Projects = () => {
-  const [projects, setProjects] = useState<Project[]>([]);
-  const [isLoading, setIsLoading] = useState<boolean>(false);
-  useEffect(() => {
-    const getData = async (): Promise<void> => {
-      setIsLoading(true);
-      try {
-        const projectList: Project[] = await getAllProjects();
-        setProjects(projectList);
-      } catch (error) {
-        console.log(error);
-      } finally {
-        setIsLoading(false);
-      }
-    };
-    getData();
-  }, []);
-
   return (
     <section id="proyectos" className={styles.projects_container}>
-      <h2>Projects</h2>
-      {isLoading ? (
-        <p>Loading...</p>
-      ) : (
-        <ul className={styles.projects_list}>
-          {projects.map((project: Project) => (
-            <li className={styles.projects_list_item} key={project.id}>
-              <a href={project.link} target="_blank">
-                <Image
-                  src={project.image || "../../assets/backend.png"}
-                  alt="project image"
-                  width={"445"}
-                  height={270}
-                />
-                <div className={styles.projects_text_container}>
-                  <div className={styles.projects_text}>
-                    <h3>{project.name}</h3>
-                    {project.description}
-                  </div>
-                  <ul className={styles.technologies_list}>
-                    {project.technologies?.map((technology: string) => (
-                      <li
-                        className={styles.technologies_list_item}
-                        key={technology}
-                      >
-                        {technology}
-                      </li>
-                    ))}
-                  </ul>
-                </div>
-              </a>
-            </li>
-          ))}
-        </ul>
-      )}
+      <div className={styles.title_cont}>
+        <h2>Projects</h2>
+        <p>
+          Estos son algunos de <strong>mis proyectos</strong>, para ver más
+          puedes visitar mi
+          <strong>GitHub.</strong>
+        </p>
+      </div>
+      <div className={styles.projects_list_container}>
+        {projectMocks.map((project: Project) => (
+          <ProjectCard key={project.id} {...project} />
+        ))}
+      </div>
+      <div>
+        <LinkedButton
+          href="https://github.com/TomasSorgetti"
+          stroked={true}
+          medium={true}
+          blank={true}
+        >
+          GitHub
+        </LinkedButton>
+      </div>
     </section>
   );
 };

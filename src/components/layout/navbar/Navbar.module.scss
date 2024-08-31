@@ -1,80 +1,45 @@
-.header{
-    width: 100%;
-    margin-bottom: 300px;
-    text-align: center;
-}
-.header nav{
+@import "../../../styles/mixins.scss";
+@import "../../../styles/variables.scss";
+
+.header nav {
     display: flex;
     justify-content: space-between;
     align-items: center;
     padding: 40px 120px;
 }
-.header nav span{
+
+.header nav span {
     font-size: 2rem;
     text-transform: uppercase;
 }
-.menu{
+
+.menu {
     display: flex;
     gap: 30px;
     list-style: none;
 }
-.menu li a{
+
+.menu li a {
     text-decoration: none;
     color: #fff;
     text-transform: uppercase;
     font-size: 1.2rem;
 }
+
 .menu li a:hover {
     color: #CB1E52;
     transition: 0.4s ease;
 }
 
-.header section {
-    padding-top: 120px;
-    display: flex;
-    margin: 0 auto;
-    align-items: center;
-    justify-content: center;
-    height: 100%;
-    gap: 20px;
-    text-align: left;
-}
-.header section h1{
-    text-transform: uppercase;
-    max-width: 620px;
-}
-.header section p{
-    width: 100%;
-    max-width: 467px;
-    margin: 40px 0;
-}
-.fullstack{
-    color: #CB1E52;
-}
-.buttons{
-    display: flex;
-    gap: 20px;
-    align-items: center;
-}
-
-.contact{
-    color: white;
-    text-decoration: none;
-    border: 2px solid #CB1E52;
-    background-color: #CB1E52;
-    border-radius: 100px;
-    padding: 12px 24px;
-    font-family: "Days One", sans-serif;
-    transition: 0.4s ease;
-}
-.hamburger{
+.hamburger {
     display: none;
     flex-direction: column;
     gap: 12px;
     cursor: pointer;
     align-items: end;
 }
-.hamburger span{
+
+.hamburger span {
     width: 40px;
     height: 4px;
     border-radius: 2px;
@@ -91,38 +56,39 @@
 }
 
 @media screen and (max-width: 1680px) {
-    .header {
-        margin-bottom: 260px;
-    }
+
 }
+
 @media screen and (max-width: 1400px) {
-    .header {
-        margin-bottom: 200px;
-    }
+
 }
+
 @media screen and (max-width: 1280px) {
-    .header {
-        margin-bottom: 160px;
-    }
+
 }
+
 @media screen and (max-width: 1024px) {
-    .header nav{
+    .header nav {
         padding: 40px 80px;
     }
-    .header nav span{
+
+    .header nav span {
         font-size: 1.6rem;
     }
 }
+
 @media screen and (max-width: 768px) {
-    .hamburger{
+    .hamburger {
         display: flex;
     }
-    .hamburger.active{
+
+    .hamburger.active {
         position: fixed;
         z-index: 999999;
         right: 80px;
     }
-    .menu{
+
+    .menu {
         height: 100vh;
         background-color: #080516;
         width: 100%;
@@ -137,35 +103,43 @@
         transform: translateX(100%);
         transition: 0.4s ease;
     }
-    .menu.active{
+
+    .menu.active {
         transform: translateX(0);
     }
-    .header section img{
+
+    .header section img {
         width: 100%;
         height: auto;
     }
 }
+
 @media screen and (max-width: 640px) {
-    .header nav{
+    .header nav {
         padding: 40px 20px;
     }
-    .hamburger.active{
+
+    .hamburger.active {
         right: 20px;
     }
 
 }
+
 @media screen and (max-width: 460px) {
-    .hamburger.active{
+    .hamburger.active {
         right: 20px;
     }
-    .header nav{
+
+    .header nav {
         padding: 40px 20px;
     }
-    .header nav span{
+
+    .header nav span {
         font-size: 1.2rem;
     }
-    .header section{
+
+    .header section {
         margin-top: 20px;
         padding-top: 20px;
-    }    
+    }
 }

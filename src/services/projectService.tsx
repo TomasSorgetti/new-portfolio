@@ -18,7 +18,7 @@ export const getAllProjects = async (): Promise<Project[]> => {
   });
 };
 
-const projectMocks = [
+export const projectMocks = [
   {
     id: 1,
     name: "Learning Spark",
@@ -31,6 +31,7 @@ const projectMocks = [
       </p>
     ),
     link: "https://www.learning-spark.com",
+    github: "https://www.github.com/TomasSorgetti",
     technologies: ["react", "tailwind"],
     image: "/images/learningspark.png",
   },
@@ -46,6 +47,7 @@ const projectMocks = [
       </p>
     ),
     link: "https://www.smalltribesshop.com",
+    github: "https://www.github.com/TomasSorgetti",
     technologies: ["wordpress", "woocommerce"],
     image: "/images/smalltribesshop.png",
   },
@@ -60,6 +62,7 @@ const projectMocks = [
       </p>
     ),
     link: "https://github.com/TomasSorgetti?tab=repositories",
+    github: "https://www.github.com/TomasSorgetti",
     technologies: ["node", "express", "sequelize", "postgres"],
     image: "/images/backend.png",
   },

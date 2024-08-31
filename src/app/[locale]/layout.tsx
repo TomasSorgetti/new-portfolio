@@ -3,7 +3,7 @@ import { NextIntlClientProvider } from "next-intl";
 import { getMessages } from "next-intl/server";
 import { LocaleProvider } from "../../providers/LocaleProvider";
 import "./globals.scss";
-import Hero from "../../components/layout/hero/Hero";
+import Navbar from "../../components/layout/navbar/Navbar";
 import Footer from "../../components/layout/footer/Footer";
 
 export const metadata: Metadata = {
@@ -27,7 +27,7 @@ export default async function LocaleLayout({
       <body>
         <NextIntlClientProvider messages={messages}>
           <LocaleProvider>
-            <Hero />
+            <Navbar />
             {children}
             <Footer />
           </LocaleProvider>

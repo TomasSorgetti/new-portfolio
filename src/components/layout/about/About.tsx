@@ -1,5 +1,5 @@
 import Image from "next/image";
-import styles from "./About.module.css";
+import styles from "./About.module.scss";
 const About = () => {
   return (
     <section id="about" className={styles.container}>

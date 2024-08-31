@@ -27,7 +27,6 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    user-select: none;
 }
 
 :root {
@@ -76,11 +75,10 @@ h2 {
     text-transform: uppercase;
 }
 
-#about,
+
 #technologies,
 #projects,
-#proyectos,
-#contacto {
+#proyectos{
     max-width: 1100px;
     margin: 0 auto;
 }
@@ -98,33 +96,27 @@ h2 {
 
 @media screen and (max-width: 1024px) {
 
-    #about,
     #technologies,
     #projects,
-    #proyectos,
-    #contacto {
+    #proyectos{
         max-width: 864px;
     }
 }
 
 @media screen and (max-width: 768px) {
 
-    #about,
     #technologies,
     #projects,
-    #proyectos,
-    #contacto {
+    #proyectos{
         max-width: 640px;
     }
 }
 
 @media screen and (max-width: 640px) {
 
-    #about,
     #technologies,
     #projects,
-    #proyectos,
-    #contacto {
+    #proyectos{
         max-width: 560px;
     }
 
@@ -144,11 +136,9 @@ h2 {
 
 @media screen and (max-width: 460px) {
 
-    #about,
     #technologies,
     #projects,
-    #proyectos,
-    #contacto {
+    #proyectos{
         max-width: 420px;
     }
 
@@ -172,11 +162,9 @@ h2 {
 
 @media screen and (max-width: 360px) {
 
-    #about,
     #technologies,
     #projects,
-    #proyectos,
-    #contacto {
+    #proyectos{
         max-width: 320px;
     }
 
