@@ -1,0 +1,134 @@
+@import "../../../styles/variables.scss";
+@import "../../../styles/mixins.scss";
+
+.contact_container {
+    display: flex;
+    justify-content: center;
+    gap: 80px;
+    width: 100%;
+    max-width: 1100px;
+    margin: 0 auto;
+    .left{
+        p{
+            max-width: 450px;
+            margin: 40px 0;
+            line-height: 1.5rem;
+            .stronger {
+                font-weight: 700;
+                color: #FE0072;
+            }
+        }        
+    }
+    .right{
+        max-width: 500px;
+        margin: 80px 0;
+        display: flex;
+        flex-direction: column;
+        gap: 12px;
+        align-items: center;
+        .input_cont {
+            text-align: start;
+            display: flex;
+            flex-direction: column;
+            width: 100%;
+            gap: 12px;
+            label{
+                color: white;
+                font-size: 1.25rem;
+                font-weight: 700;
+                position: relative;
+                &::after {
+                    content: "*";
+                    position: absolute;
+                    color: #FE0072;
+                    font-size: 0.9rem;
+                }
+            }
+            input{
+                height: 56px;
+                border-radius: 6px;
+                background-color: transparent;
+                border: 1px solid white;
+                padding: 12px;
+                font-size: 1.25rem;
+                color: white;
+            }
+            textarea{
+                border-radius: 6px;
+                max-width: 500px;
+                height: 200px;
+                resize: none;
+                background-color: transparent;
+                border: 1px solid white;
+                padding: 12px;
+                font-size: 1.25rem;
+                color: white;
+            }
+            
+            .recaptcha_cont{
+                width: 100%;
+                display: flex;
+                justify-content: start;
+            }
+        }
+        button{
+            background-color: $primary-color;
+            border: 2px solid $primary-color;
+            color: $white-color;
+            font-size: 1.25rem;
+            text-decoration: none;
+            font-weight: 800;
+            padding: 12px 24px;
+            cursor: pointer;
+            @include border-radius(100px);
+            transition: 0.4s ease;
+        
+            &:hover {
+                border: 2px solid $primary-hover-color;
+                background-color: $primary-hover-color;
+            }
+        }
+    }
+}
+
+
+
+.error{
+    color: #FE0072;
+}
+.button_loading{
+    background-color: #e293b7!important;
+    border-color: #e293b7!important;
+}
+
+
+.contact_container form button:hover {
+    background-color: #f0378a;
+    box-shadow: 1px 0px 37px -6px rgba(238, 51, 135, 0.818);
+    -webkit-box-shadow: 1px 0px 37px -6px rgba(238, 51, 135, 0.818);
+    -moz-box-shadow: 1px 0px 37px -6px rgba(238, 51, 135, 0.818);
+}
+
+.contact_container form button:focus {
+    background-color: #c51765;
+    box-shadow: 1px 0px 37px -6px rgba(184, 29, 99, 0.629);
+    -webkit-box-shadow: 1px 0px 37px -6px rgba(184, 29, 99, 0.629);
+    -moz-box-shadow: 1px 0px 37px -6px rgba(184, 29, 99, 0.629);
+}
+
+@media screen and (max-width: 640px) {
+    .contact_container p{
+        font-size: 1.4rem;
+        line-height: 34px;
+    }
+        
+}
+@media screen and (max-width: 360px) {
+    .contact_container form .input_cont input, .contact_container form .input_cont textarea, .contact_container form .input_cont label{
+        font-size: 1rem;
+    }
+     .contact_container p{
+        font-size: 1rem;
+        line-height: 30px;
+    }
+}

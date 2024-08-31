@@ -1,6 +1,17 @@
-.projects_container h2{
-    margin-top: 200px;
+.title_cont{
     margin-bottom: 120px;
+    max-width: 600px;
+    padding: 0;
+    p{
+        margin-top: 20px;
+        strong{
+            color: #FE0072;        
+        }
+    }
+}
+.projects_list_container{
+    display: flex;
+    gap: 20px;
 }
 .projects_list p strong{
     color: #FE0072;

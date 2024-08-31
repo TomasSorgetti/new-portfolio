@@ -22,7 +22,7 @@ const Hero = () => {
   };
 
   return (
-    <header className={styles.header} onContextMenu={(e) => e.preventDefault()}>
+    <header className={styles.header}>
       <nav>
         <span>Tomas Sorgetti</span>
         <div

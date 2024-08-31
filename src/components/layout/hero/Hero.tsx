@@ -26,10 +26,16 @@ const Hero = () => {
             href="https://github.com/tomassorgetti"
             blank={true}
             stroked={true}
+            medium={true}
           >
             GitHub
           </LinkedButton>
-          <LinkedButton href="#contacto" blank={false} stroked={false}>
+          <LinkedButton
+            href="#contacto"
+            blank={false}
+            stroked={false}
+            medium={true}
+          >
             Contactar
           </LinkedButton>
         </div>

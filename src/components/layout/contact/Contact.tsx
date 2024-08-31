@@ -1,13 +1,14 @@
 "use client";
 
 import React, { useState } from "react";
-import styles from "./Contact.module.css";
+import styles from "./Contact.module.scss";
 // import { sendEmail } from "@/services/sendmail";
 import { ToastContainer, toast } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
 import ClipLoader from "react-spinners/ClipLoader";
 import emailjs from "emailjs-com";
 import ReCAPTCHA from "react-google-recaptcha";
+import CopySelected from "@/components/ui/copy_selected/CopySelected";
 
 const Contact = () => {
   const [isLoading, setIsLoading] = useState(false);
@@ -108,7 +109,7 @@ const Contact = () => {
 
   return (
     <section id="contacto" className={styles.contact_container}>
-      <ToastContainer
+      {/* <ToastContainer
         position="top-right"
         autoClose={4000}
         hideProgressBar={false}
@@ -119,17 +120,30 @@ const Contact = () => {
         draggable
         pauseOnHover
         theme="dark"
-      />
-      <h2>Contacto</h2>
-      <p>
-        Hola! Si estás interesado/a en{" "}
-        <span className={styles.stronger}>colaborar en un proyecto</span>,
-        tienes preguntas sobre mi trabajo, o simplemente querés saludar, ¡No
-        dudes en escribirme! Estoy acá para ayudarte con
-        <span className={styles.stronger}> cualquier consulta que tengas.</span>
-      </p>
+      /> */}
+      <div className={styles.left}>
+        <h2>Contacto</h2>
+        <p>
+          Hola! Si estás interesado/a en{" "}
+          <span className={styles.stronger}>colaborar en un proyecto</span>,
+          tienes preguntas sobre mi trabajo, o simplemente querés saludar, ¡No
+          dudes en escribirme! Estoy acá para ayudarte con
+          <span className={styles.stronger}>
+            {" "}
+            cualquier consulta que tengas.
+          </span>
+        </p>
+        <CopySelected
+          label="+54 9 11 3632 3780"
+          icon="/images/copy_whatsapp.png"
+        />
+        <CopySelected
+          label="tomassorgetti456@gmail.com"
+          icon="/images/copy_gmail.png"
+        />
+      </div>
 
-      <form onSubmit={handleSubmit}>
+      <form className={styles.right} onSubmit={handleSubmit}>
         <div className={styles.input_cont}>
           <label>Nombre:</label>
           <input
@@ -169,12 +183,12 @@ const Contact = () => {
             value={form.message}
           />
         </div>
-        <div className={styles.recaptcha_cont}>
+        {/* <div className={styles.recaptcha_cont}>
           <ReCAPTCHA
             sitekey="6LcSayQqAAAAABeJbN00eADTqtpJ3LLWV-hIeYHi"
             onChange={handleCaptchaChange}
           />
-        </div>
+        </div> */}
         <button
           type="submit"
           className={isLoading ? styles.button_loading : ""}
@@ -191,7 +205,7 @@ const Contact = () => {
               Enviando...
             </div>
           ) : (
-            "Enviar"
+            "Contactar"
           )}
         </button>
       </form>

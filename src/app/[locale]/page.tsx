@@ -10,7 +10,7 @@ import Hero from "@/components/layout/hero/Hero";
 
 export default function Home() {
   return (
-    <main className={styles.main} onContextMenu={(e) => e.preventDefault()}>
+    <main className={styles.main}>
       {/* <ChatbotComponent /> */}
       <Hero />
       <Projects />

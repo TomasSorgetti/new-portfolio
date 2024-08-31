@@ -1,0 +1,21 @@
+.copy_selected{
+    display: flex;
+    gap: 10px;
+    align-items: center;
+    margin-bottom: 20px;
+    div{
+        height: 47px;
+        padding: 0 12px;
+        border-radius: 6px;
+        display: flex;
+        align-items: center;
+        gap: 10px;
+        background-color: #2B2B2B;
+        color: #D1D1D1;
+    }
+    button{
+        cursor: pointer;
+        background-color: transparent;
+        border: none;
+    }
+}
