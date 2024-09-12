@@ -1,66 +1,82 @@
-
 .banner {
-    padding: 120px 0;
-    display: flex;
-    margin: 0 auto;
-    width: 100%;
-    max-width: 1100px;
-    align-items: center;
-    justify-content: space-between;
-    height: 100%;
-    gap: 20px;
-    text-align: left;
-    .title{
-        text-transform: uppercase;
-        max-width: 620px;
+  padding: 7.5rem 0;
+  display: flex;
+  margin: 0 auto;
+  width: 100%;
+  align-items: center;
+  justify-content: center;
+  height: 100%;
+  text-align: left;
+  .text_cont {
+    .title {
+      text-transform: uppercase;
+      max-width: 620px;
+      font-size: 2.5rem;
     }
-    p{
-        width: 100%;
-        max-width: 467px;
-        margin: 40px 0;
+    p {
+      width: 100%;
+      max-width: 467px;
+      margin: 2.5rem 0;
+      font-size: 1.125rem;
     }
-    .fullstack{
-        color: #CB1E52;
+    .fullstack {
+      color: #cb1e52;
     }
-    .buttons{
-        display: flex;
-        gap: 20px;
-        align-items: center;
+    .buttons {
+      display: flex;
+      gap: 1.25rem;
+      align-items: center;
     }
+  }
 }
 
-
-
-@media screen and (max-width: 1680px) {
-    .banner {
-        margin-bottom: 260px;
-    }
-}
-@media screen and (max-width: 1400px) {
-    .banner {
-        margin-bottom: 200px;
-    }
-}
 @media screen and (max-width: 1280px) {
-    .banner {
-        margin-bottom: 160px;
+  .banner {
+    .title {
+      font-size: 2.3rem;
     }
+    p {
+      font-size: 1.1rem;
+    }
+    img {
+      width: 440px;
+      height: auto;
+    }
+  }
 }
 @media screen and (max-width: 1024px) {
-
-}
-@media screen and (max-width: 768px) {
-    .banner img{
-        width: 100%;
-        height: auto;
+  .banner {
+    padding-top: 20px;
+    flex-direction: column-reverse;
+    .text_cont {
+      text-align: center;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
     }
+    img {
+      width: 490px;
+      height: auto;
+    }
+  }
 }
 @media screen and (max-width: 640px) {
-
+  .banner {
+    .text_cont {
+      .title {
+        font-size: 2rem;
+      }
+      p {
+        font-size: 1rem;
+      }
+    }
+  }
 }
 @media screen and (max-width: 460px) {
-    .banner{
-        margin-top: 20px;
-        padding-top: 20px;
-    }    
+  .banner {
+    img {
+      width: 100%;
+      height: auto;
+    }
+  }
 }

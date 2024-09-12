@@ -65,7 +65,12 @@ const Hero = () => {
             </a>
           </li>
           <li>
-            <LinkedButton href="#" blank={true} stroked={true}>
+            <LinkedButton
+              href="/TomasSorgetti_WebDesigner_English.pdf"
+              blank={true}
+              stroked={true}
+              download={true}
+            >
               Descargar CV
             </LinkedButton>
           </li>

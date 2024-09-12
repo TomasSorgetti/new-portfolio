@@ -1,71 +1,79 @@
-.footer_cont{
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    gap: 20px;
-    padding: 40px 0;
-    background-color: rgba(150, 150, 150, 0.2);
-    filter: blur(20);
+.footer_cont {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 20px;
+  padding: 40px 0;
+  /* background-color: rgba(150, 150, 150, 0.2); */
+  /* filter: blur(20); */
 }
-.footer_cont ul{
-    display: flex;
-    gap: 60px;
-    list-style: none;    
+.footer_title {
+  font-family: "Days One", sans-serif;
+  font-size: 2.5rem;
+  color: white;
 }
-.icon{
-    font-size: 2.5rem;
-    color: white;
+.footer_cont ul {
+  display: flex;
+  gap: 60px;
+  list-style: none;
 }
-.icon:hover{
-    color: #FE0072;
-    transition: 0.4s ease;
+.icon {
+  font-size: 2.5rem;
+  color: white;
+}
+.icon:hover {
+  color: #fe0072;
+  transition: 0.4s ease;
 }
 
 .link {
-    display: block;
-    width: 100%;
-    height: 100%;
-    text-decoration: none;
-    color: inherit;
+  display: block;
+  width: 100%;
+  height: 100%;
+  text-decoration: none;
+  color: inherit;
 }
 
 .srOnly {
-    position: absolute;
-    width: 1px;
-    height: 1px;
-    margin: -1px;
-    padding: 0;
-    overflow: hidden;
-    clip: rect(0, 0, 0, 0);
-    border: 0;
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  padding: 0;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  border: 0;
 }
-.footer_cont nav p{
-    margin-top: 20px;
+.footer_cont nav p {
+  margin-top: 20px;
 }
-.footer_cont nav ul li a{
-    text-decoration: none;
-    color: #fff;
-    text-transform: uppercase;
-    font-size: 1.2rem;
+.footer_cont nav ul li a {
+  text-decoration: none;
+  color: #fff;
+  text-transform: uppercase;
+  font-size: 1.2rem;
 }
-.footer_cont nav ul li a:hover{
-    color: #FE0072;
-    transition: 0.4s ease;
+.footer_cont nav ul li a:hover {
+  color: #fe0072;
+  transition: 0.4s ease;
 }
 
 @media screen and (max-width: 768px) {
-    .footer_cont {
-        text-align: center;
-    }
+  .footer_cont {
+    text-align: center;
+  }
+  .footer_cont .footer_title {
+    font-size: 2rem;
+  }
 }
 @media screen and (max-width: 640px) {
-    .footer_cont{
-        gap: 40px;
-    }
+  .footer_cont {
+    gap: 40px;
+  }
 }
 @media screen and (max-width: 460px) {
-    .footer_cont nav ul{
-        flex-direction: column;
-        gap: 40px;
-    }
+  .footer_cont nav ul {
+    flex-direction: column;
+    gap: 40px;
+  }
 }

@@ -10,7 +10,7 @@ const Hero = () => {
 
   return (
     <section className={styles.banner}>
-      <div>
+      <div className={styles.text_cont}>
         <h1 className={styles.title} id="title_job">
           {t("title")}{" "}
           <strong className={styles.fullstack}>{t("title_strong")}</strong>
@@ -43,8 +43,8 @@ const Hero = () => {
       <Image
         src="/images/hero.png"
         alt="tomas sorgetti looking to a side"
-        width={"606"}
-        height={606}
+        width={"490"}
+        height={490}
         priority
       />
     </section>
