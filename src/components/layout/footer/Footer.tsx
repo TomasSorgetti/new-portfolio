@@ -9,7 +9,7 @@ const Footer = () => {
       className={styles.footer_cont}
       onContextMenu={(e) => e.preventDefault()}
     >
-      <span id="footer_name">Tomas Sorgetti</span>
+      <span className={styles.footer_title} id="footer_name">Tomas Sorgetti</span>
       <ul>
         <li className={`${styles.icon}`}>
           <a

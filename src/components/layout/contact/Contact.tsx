@@ -133,14 +133,16 @@ const Contact = () => {
             cualquier consulta que tengas.
           </span>
         </p>
-        <CopySelected
-          label="+54 9 11 3632 3780"
-          icon="/images/copy_whatsapp.png"
-        />
-        <CopySelected
-          label="tomassorgetti456@gmail.com"
-          icon="/images/copy_gmail.png"
-        />
+        <div className={styles.copy_cont}>
+          <CopySelected
+            label="+54 9 11 3632 3780"
+            icon="/images/copy_whatsapp.png"
+          />
+          <CopySelected
+            label="tomassorgetti456@gmail.com"
+            icon="/images/copy_gmail.png"
+          />
+        </div>
       </div>
 
       <form className={styles.right} onSubmit={handleSubmit}>

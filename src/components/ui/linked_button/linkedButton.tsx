@@ -8,6 +8,7 @@ export default function LinkedButton({
   small,
   medium,
   large,
+  download,
 }: {
   href: string;
   blank: boolean;
@@ -16,6 +17,7 @@ export default function LinkedButton({
   small?: boolean;
   medium?: boolean;
   large?: boolean;
+  download?: boolean;
 }) {
   return (
     <a
@@ -33,6 +35,7 @@ export default function LinkedButton({
           ? "1.6rem"
           : "1.25rem",
       }}
+      download={download ? "" : undefined}
     >
       {children}
     </a>

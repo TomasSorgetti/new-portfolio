@@ -15,7 +15,7 @@ interface Project {
 
 const Projects = () => {
   return (
-    <section id="proyectos" className={styles.projects_container}>
+    <section id="projects" className={styles.projects_container}>
       <div className={styles.title_cont}>
         <h2>Projects</h2>
         <p>
@@ -29,14 +29,14 @@ const Projects = () => {
           <ProjectCard key={project.id} {...project} />
         ))}
       </div>
-      <div>
+      <div className={styles.button_cont}>
         <LinkedButton
           href="https://github.com/TomasSorgetti"
           stroked={true}
           medium={true}
           blank={true}
         >
-          GitHub
+          Ver todos
         </LinkedButton>
       </div>
     </section>
